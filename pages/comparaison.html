@@ -1,0 +1,792 @@
+<!DOCTYPE html>
+<html lang="fr" data-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>NovaMind vs Concurrents : Pourquoi nous choisir ?</title>
+    <meta
+      name="description"
+      content="Comparatif détaillé : NovaMind face à Zapier, Make, n8n et Workato. Découvrez l'alternative française pour l'automatisation d'entreprise."
+    />
+
+    <!-- Google Fonts: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+
+    <!-- Pico CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css" />
+
+    <style>
+      :root {
+        --primary: #2563eb;
+        --primary-hover: #1d4ed8;
+        --secondary: #64748b;
+        --success: #22c55e;
+        --danger: #ef4444;
+        --background-light: #f8fafc;
+        --text-dark: #0f172a;
+        --novamind-bg: #eff6ff;
+        --novamind-border: #bfdbfe;
+        --card-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+      }
+
+      body {
+        font-family: 'Inter', sans-serif;
+        color: var(--text-dark);
+        margin: 0;
+        padding: 0;
+        background-color: #fff;
+      }
+
+      /* Layout overrides */
+      main {
+        padding-top: 2rem;
+        padding-bottom: 4rem;
+      }
+
+      h1,
+      h2,
+      h3,
+      h4 {
+        color: var(--text-dark);
+        font-weight: 700;
+      }
+
+      .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 20px;
+      }
+
+      /* Header Section */
+      .hero-section {
+        text-align: center;
+        padding: 4rem 1rem;
+        background: linear-gradient(180deg, #f0f9ff 0%, #ffffff 100%);
+        border-bottom: 1px solid #e2e8f0;
+        margin-bottom: 3rem;
+      }
+
+      .hero-title {
+        font-size: 2.5rem;
+        margin-bottom: 1rem;
+        line-height: 1.2;
+      }
+
+      .hero-subtitle {
+        font-size: 1.25rem;
+        color: var(--secondary);
+        max-width: 800px;
+        margin: 0 auto;
+      }
+
+      .intro-text {
+        text-align: center;
+        max-width: 800px;
+        margin: 0 auto 3rem auto;
+        font-size: 1.1rem;
+        color: var(--secondary);
+      }
+
+      /* Comparison Table */
+      .comparison-wrapper {
+        overflow-x: auto;
+        margin-bottom: 4rem;
+        border-radius: 12px;
+        box-shadow: var(--card-shadow);
+        border: 1px solid #e2e8f0;
+      }
+
+      table.comparison-table {
+        width: 100%;
+        border-collapse: collapse;
+        margin: 0;
+        background: white;
+        font-size: 0.95rem;
+      }
+
+      .comparison-table th,
+      .comparison-table td {
+        padding: 1rem;
+        text-align: center;
+        border-bottom: 1px solid #e2e8f0;
+        vertical-align: middle;
+      }
+
+      .comparison-table th {
+        background-color: #f8fafc;
+        font-weight: 600;
+        color: var(--text-dark);
+        position: sticky;
+        top: 0;
+      }
+
+      .comparison-table th.criteria-col {
+        text-align: left;
+        min-width: 200px;
+        background-color: #fff;
+      }
+
+      .comparison-table td.criteria-col {
+        text-align: left;
+        font-weight: 500;
+      }
+
+      /* NovaMind Highlight Column */
+      .comparison-table .novamind-col {
+        background-color: var(--novamind-bg);
+        border-left: 2px solid var(--primary);
+        border-right: 2px solid var(--primary);
+        color: var(--text-dark);
+        font-weight: 600;
+        position: relative;
+      }
+
+      .comparison-table th.novamind-col {
+        background-color: #dbeafe;
+        color: var(--primary);
+        font-size: 1.1rem;
+        border-top: 2px solid var(--primary);
+      }
+
+      .status-icon {
+        font-size: 1.2rem;
+      }
+      .check {
+        color: var(--success);
+      }
+      .cross {
+        color: #cbd5e1;
+      }
+      .partial {
+        color: #f59e0b;
+      }
+
+      /* Stars */
+      .stars {
+        color: #fbbf24;
+        letter-spacing: -2px;
+      }
+
+      /* Advantages Grid */
+      .section-title {
+        text-align: center;
+        font-size: 2rem;
+        margin-bottom: 2rem;
+        color: var(--text-dark);
+      }
+
+      .advantages-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 1.5rem;
+        margin-bottom: 4rem;
+      }
+
+      .advantage-card {
+        background: white;
+        padding: 1.5rem;
+        border-radius: 8px;
+        border: 1px solid #e2e8f0;
+        transition: transform 0.2s;
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+      }
+
+      .advantage-icon {
+        font-size: 2rem;
+        color: var(--primary);
+        margin-bottom: 1rem;
+      }
+
+      .advantage-card h3 {
+        font-size: 1.1rem;
+        margin-bottom: 0.5rem;
+      }
+
+      .advantage-card p {
+        font-size: 0.9rem;
+        color: var(--secondary);
+        margin-bottom: 0.5rem;
+        line-height: 1.5;
+      }
+
+      .stat-highlight {
+        font-weight: 700;
+        color: var(--text-dark);
+        font-size: 0.9rem;
+        display: block;
+        margin-top: 0.5rem;
+        padding-top: 0.5rem;
+        border-top: 1px dashed #e2e8f0;
+      }
+
+      /* Use Cases */
+      .use-cases-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 2rem;
+        margin-bottom: 4rem;
+      }
+
+      .use-case-card {
+        background: #fff;
+        border-radius: 12px;
+        overflow: hidden;
+        box-shadow: var(--card-shadow);
+        border: 1px solid #e2e8f0;
+      }
+
+      .use-case-header {
+        background: var(--text-dark);
+        color: white;
+        padding: 1.5rem;
+      }
+
+      .use-case-header h3 {
+        color: white;
+        margin: 0;
+        font-size: 1.2rem;
+      }
+
+      .use-case-body {
+        padding: 1.5rem;
+      }
+
+      .comparison-point {
+        margin-bottom: 1rem;
+        padding-bottom: 1rem;
+        border-bottom: 1px solid #f1f5f9;
+      }
+      .comparison-point:last-child {
+        border-bottom: none;
+      }
+
+      .competitor-name {
+        font-weight: 600;
+        color: var(--danger);
+        display: block;
+        margin-bottom: 0.25rem;
+      }
+
+      .novamind-name {
+        font-weight: 600;
+        color: var(--success);
+        display: block;
+        margin-bottom: 0.25rem;
+      }
+
+      /* FAQ */
+      .faq-section {
+        max-width: 800px;
+        margin: 0 auto 4rem auto;
+      }
+
+      details {
+        background: white;
+        border: 1px solid #e2e8f0;
+        border-radius: 8px;
+        margin-bottom: 1rem;
+        padding: 0;
+      }
+
+      details summary {
+        padding: 1rem 1.5rem;
+        font-weight: 600;
+        cursor: pointer;
+        list-style: none; /* remove default arrow */
+        position: relative;
+      }
+
+      details summary::after {
+        content: '+';
+        position: absolute;
+        right: 1.5rem;
+        font-weight: 400;
+        font-size: 1.2rem;
+      }
+
+      details[open] summary::after {
+        content: '-';
+      }
+
+      details[open] summary {
+        border-bottom: 1px solid #e2e8f0;
+        background-color: #f8fafc;
+      }
+
+      details p {
+        padding: 1.5rem;
+        margin: 0;
+        color: var(--secondary);
+        line-height: 1.6;
+      }
+
+      /* CTA Section */
+      .cta-section {
+        background-color: var(--primary);
+        color: white;
+        text-align: center;
+        padding: 4rem 1rem;
+        border-radius: 16px;
+        margin-bottom: 2rem;
+      }
+
+      .cta-title {
+        color: white;
+        font-size: 2rem;
+        margin-bottom: 2rem;
+      }
+
+      .cta-buttons {
+        display: flex;
+        gap: 1rem;
+        justify-content: center;
+        flex-wrap: wrap;
+        margin-bottom: 2rem;
+      }
+
+      .btn {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        padding: 0.75rem 1.5rem;
+        border-radius: 6px;
+        font-weight: 600;
+        text-decoration: none;
+        transition: all 0.2s;
+        border: none;
+        cursor: pointer;
+        font-size: 1rem;
+      }
+
+      .btn-white {
+        background-color: white;
+        color: var(--primary);
+      }
+      .btn-white:hover {
+        background-color: #f8fafc;
+      }
+
+      .btn-outline {
+        background-color: transparent;
+        border: 2px solid white;
+        color: white;
+      }
+      .btn-outline:hover {
+        background-color: rgba(255, 255, 255, 0.1);
+      }
+
+      .btn-dark {
+        background-color: #1e293b;
+        color: white;
+      }
+      .btn-dark:hover {
+        background-color: #0f172a;
+      }
+
+      .guarantee {
+        font-size: 0.9rem;
+        opacity: 0.9;
+        margin-top: 1rem;
+      }
+      .guarantee i {
+        margin-right: 0.5rem;
+      }
+
+      .logo-text {
+        font-weight: 800;
+        color: var(--primary);
+      }
+
+      /* Responsive */
+      @media (max-width: 768px) {
+        .hero-title {
+          font-size: 2rem;
+        }
+        .comparison-table {
+          font-size: 0.8rem;
+        }
+        .comparison-table th,
+        .comparison-table td {
+          padding: 0.5rem;
+        }
+        .cta-buttons {
+          flex-direction: column;
+        }
+        .btn {
+          width: 100%;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Header / Hero -->
+    <header class="hero-section">
+      <div class="container">
+        <h1 class="hero-title">NovaMind vs Concurrents :<br />Pourquoi nous choisir ?</h1>
+        <p class="hero-subtitle">L'alternative française aux plateformes d'automatisation internationales</p>
+      </div>
+    </header>
+
+    <main class="container">
+      <!-- Introduction -->
+      <p class="intro-text">
+        Alors que le marché est dominé par des géants américains complexes et coûteux, NovaMind se positionne comme le
+        partenaire de confiance pour les entreprises européennes. Découvrez comment notre approche locale, sécurisée et
+        performante se compare aux standards du marché.
+      </p>
+
+      <!-- Comparison Table -->
+      <div class="comparison-wrapper">
+        <table class="comparison-table">
+          <thead>
+            <tr>
+              <th class="criteria-col">Critères</th>
+              <th class="novamind-col">
+                <span class="logo-text">NovaMind</span>
+              </th>
+              <th>Zapier</th>
+              <th>Make</th>
+              <th>n8n</th>
+              <th>Workato</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="criteria-col">Prix Entrée de Gamme</td>
+              <td class="novamind-col">299€ / mois<br /><small>(Essentials)</small></td>
+              <td>29.99$ / mois</td>
+              <td>9€ / mois</td>
+              <td>20€ / mois<br /><small>(Cloud)</small></td>
+              <td>10,000$ / an<br /><small>(Enterprise)</small></td>
+            </tr>
+            <tr>
+              <td class="criteria-col">Facilité d'utilisation</td>
+              <td class="novamind-col"><span class="stars">★★★★★</span></td>
+              <td><span class="stars">★★★★★</span></td>
+              <td><span class="stars">★★★☆☆</span></td>
+              <td><span class="stars">★★☆☆☆</span></td>
+              <td><span class="stars">★★★☆☆</span></td>
+            </tr>
+            <tr>
+              <td class="criteria-col">Support en Français</td>
+              <td class="novamind-col"><i class="fas fa-check-circle check"></i> Natif</td>
+              <td><i class="fas fa-times-circle cross"></i> (Anglais)</td>
+              <td><i class="fas fa-times-circle cross"></i> (Anglais)</td>
+              <td><i class="fas fa-times-circle cross"></i> (Community)</td>
+              <td><i class="fas fa-times-circle cross"></i> (Anglais)</td>
+            </tr>
+            <tr>
+              <td class="criteria-col">Hébergement Europe</td>
+              <td class="novamind-col"><i class="fas fa-shield-alt check"></i> 100% EU</td>
+              <td><i class="fas fa-times-circle cross"></i> US</td>
+              <td><i class="fas fa-exclamation-circle partial"></i> Mixte</td>
+              <td><i class="fas fa-check-circle check"></i> (Si self-hosted)</td>
+              <td><i class="fas fa-exclamation-circle partial"></i> US/EU</td>
+            </tr>
+            <tr>
+              <td class="criteria-col">Conformité RGPD Native</td>
+              <td class="novamind-col"><i class="fas fa-lock check"></i> Par design</td>
+              <td><i class="fas fa-exclamation-circle partial"></i> Standard</td>
+              <td><i class="fas fa-check-circle check"></i> Standard</td>
+              <td><i class="fas fa-exclamation-circle partial"></i> À gérer</td>
+              <td><i class="fas fa-check-circle check"></i> Standard</td>
+            </tr>
+            <tr>
+              <td class="criteria-col">Nombre d'intégrations</td>
+              <td class="novamind-col">54 <small>(Qualité+)</small></td>
+              <td>7,000+</td>
+              <td>1,500+</td>
+              <td>400+</td>
+              <td>1,200+</td>
+            </tr>
+            <tr>
+              <td class="criteria-col">Temps de réponse support</td>
+              <td class="novamind-col"><strong>< 2 heures</strong></td>
+              <td>24-48h</td>
+              <td>Variable</td>
+              <td>Community</td>
+              <td>Premium</td>
+            </tr>
+            <tr>
+              <td class="criteria-col">Onboarding Personnalisé</td>
+              <td class="novamind-col"><i class="fas fa-check-circle check"></i> Inclus</td>
+              <td><i class="fas fa-times-circle cross"></i> Non</td>
+              <td><i class="fas fa-times-circle cross"></i> Non</td>
+              <td><i class="fas fa-times-circle cross"></i> Non</td>
+              <td><i class="fas fa-check-circle check"></i> Payant</td>
+            </tr>
+            <tr>
+              <td class="criteria-col">API Publique</td>
+              <td class="novamind-col"><i class="fas fa-check-circle check"></i> Oui</td>
+              <td><i class="fas fa-check-circle check"></i> Oui</td>
+              <td><i class="fas fa-check-circle check"></i> Oui</td>
+              <td><i class="fas fa-check-circle check"></i> Oui</td>
+              <td><i class="fas fa-check-circle check"></i> Oui</td>
+            </tr>
+            <tr>
+              <td class="criteria-col">Self-hosted possible</td>
+              <td class="novamind-col"><i class="fas fa-times-circle cross"></i> (SaaS)</td>
+              <td><i class="fas fa-times-circle cross"></i> Non</td>
+              <td><i class="fas fa-times-circle cross"></i> Non</td>
+              <td><i class="fas fa-check-circle check"></i> Oui</td>
+              <td><i class="fas fa-times-circle cross"></i> Non</td>
+            </tr>
+            <tr>
+              <td class="criteria-col">Cible Principale</td>
+              <td class="novamind-col">PME / ETI</td>
+              <td>Freelance / TPE</td>
+              <td>Tech / Dev</td>
+              <td>Tech / Dev</td>
+              <td>Grand Groupe</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- Avantages Section -->
+      <h2 class="section-title">Les 8 Piliers de l'Expérience NovaMind</h2>
+      <div class="advantages-grid">
+        <!-- Card 1 -->
+        <div class="advantage-card">
+          <div class="advantage-icon"><i class="fas fa-flag"></i></div>
+          <h3>100% Français</h3>
+          <p>
+            Une équipe basée à Paris, un support francophone natif et des serveurs en France. Souveraineté garantie.
+          </p>
+          <span class="stat-highlight">Localisation: Paris, France</span>
+        </div>
+        <!-- Card 2 -->
+        <div class="advantage-card">
+          <div class="advantage-icon"><i class="fas fa-user-shield"></i></div>
+          <h3>RGPD par Design</h3>
+          <p>Nous ne nous contentons pas de respecter la loi, nous l'avons intégrée au cœur de notre architecture.</p>
+          <span class="stat-highlight">Certifications: ISO 27001, HDS</span>
+        </div>
+        <!-- Card 3 -->
+        <div class="advantage-card">
+          <div class="advantage-icon"><i class="fas fa-rocket"></i></div>
+          <h3>Onboarding VIP</h3>
+          <p>Ne démarrez pas seul. Un expert dédié vous accompagne pendant 30 jours pour configurer vos workflows.</p>
+          <span class="stat-highlight">Inclus dans tous les plans</span>
+        </div>
+        <!-- Card 4 -->
+        <div class="advantage-card">
+          <div class="advantage-icon"><i class="fas fa-tags"></i></div>
+          <h3>Prix Transparent</h3>
+          <p>Pas de coût par "opération" difficile à estimer. Un forfait mensuel clair et prévisible.</p>
+          <span class="stat-highlight">Dès 299€ / mois</span>
+        </div>
+        <!-- Card 5 -->
+        <div class="advantage-card">
+          <div class="advantage-icon"><i class="fas fa-headset"></i></div>
+          <h3>Support Réactif</h3>
+          <p>Fini les tickets sans réponse. Nous répondons en moins de 2h, du lundi au vendredi, 9h-18h CET.</p>
+          <span class="stat-highlight">Temps moy.: 1h 12min</span>
+        </div>
+        <!-- Card 6 -->
+        <div class="advantage-card">
+          <div class="advantage-icon"><i class="fas fa-building"></i></div>
+          <h3>PME-Focus</h3>
+          <p>Pensé spécifiquement pour les structures de 50 à 500 employés. Ni trop simple, ni trop complexe.</p>
+          <span class="stat-highlight">Cible: ETI & PME</span>
+        </div>
+        <!-- Card 7 -->
+        <div class="advantage-card">
+          <div class="advantage-icon"><i class="fas fa-cogs"></i></div>
+          <h3>Personnalisation</h3>
+          <p>Besoin d'aller plus loin ? Notre API complète permet de créer des connecteurs sur-mesure.</p>
+          <span class="stat-highlight">API: REST & Webhooks</span>
+        </div>
+        <!-- Card 8 -->
+        <div class="advantage-card">
+          <div class="advantage-icon"><i class="fas fa-chart-line"></i></div>
+          <h3>ROI Démontré</h3>
+          <p>Nos clients rentabilisent leur abonnement dès le premier mois grâce aux gains de productivité.</p>
+          <span class="stat-highlight">Gain moy.: 12h/semaine/employé</span>
+        </div>
+      </div>
+
+      <!-- Cas d'Usage -->
+      <h2 class="section-title">Quel scénario vous correspond ?</h2>
+      <div class="use-cases-grid">
+        <!-- Scenario 1 -->
+        <div class="use-case-card">
+          <div class="use-case-header">
+            <h3>🏛️ PME Française & RGPD</h3>
+          </div>
+          <div class="use-case-body">
+            <p>
+              <strong>Le besoin :</strong> Automatiser des données clients sensibles (Santé, Finance) en respectant
+              strictement la loi.
+            </p>
+            <div class="comparison-point">
+              <span class="competitor-name"><i class="fas fa-times"></i> Pourquoi pas Zapier ?</span>
+              <p style="font-size: 0.9rem; color: #64748b">
+                Hébergement des données aux US. Complexité juridique (transfert hors UE) et support uniquement en
+                anglais.
+              </p>
+            </div>
+            <div class="comparison-point">
+              <span class="novamind-name"><i class="fas fa-check"></i> La solution NovaMind</span>
+              <p style="font-size: 0.9rem">
+                Hébergement souverain (Paris/Francfort). Conformité HDS/RGPD native. Contrats en droit français.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Scenario 2 -->
+        <div class="use-case-card">
+          <div class="use-case-header">
+            <h3>⚡ Besoin de Support Réactif</h3>
+          </div>
+          <div class="use-case-body">
+            <p>
+              <strong>Le besoin :</strong> Une équipe opérationnelle qui ne peut pas attendre 48h quand un workflow
+              critique s'arrête.
+            </p>
+            <div class="comparison-point">
+              <span class="competitor-name"><i class="fas fa-times"></i> Pourquoi pas Make ?</span>
+              <p style="font-size: 0.9rem; color: #64748b">
+                Support complexe à joindre sur les petits plans. Interface technique qui demande une expertise interne.
+              </p>
+            </div>
+            <div class="comparison-point">
+              <span class="novamind-name"><i class="fas fa-check"></i> La solution NovaMind</span>
+              <p style="font-size: 0.9rem">
+                Support humain < 2h. Onboarding inclus pour former vos équipes. Pas de blocage technique prolongé.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Scenario 3 -->
+        <div class="use-case-card">
+          <div class="use-case-header">
+            <h3>💰 Budget Maîtrisé & Puissance</h3>
+          </div>
+          <div class="use-case-body">
+            <p>
+              <strong>Le besoin :</strong> Fonctionnalités avancées d'intégration sans payer le prix d'une solution
+              "Enterprise".
+            </p>
+            <div class="comparison-point">
+              <span class="competitor-name"><i class="fas fa-times"></i> Pourquoi pas Workato ?</span>
+              <p style="font-size: 0.9rem; color: #64748b">
+                Excellent outil mais barrière à l'entrée très haute (~10k$/an minimum). Surdimensionné pour une PME.
+              </p>
+            </div>
+            <div class="comparison-point">
+              <span class="novamind-name"><i class="fas fa-check"></i> La solution NovaMind</span>
+              <p style="font-size: 0.9rem">
+                Plan Essentials à 299€/mois offrant une puissance comparable pour les besoins courants des PME.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- FAQ -->
+      <h2 class="section-title">Questions Fréquentes</h2>
+      <div class="faq-section">
+        <details>
+          <summary>NovaMind est-il vraiment moins cher que Zapier ?</summary>
+          <p>
+            Cela dépend du volume. Zapier peut sembler moins cher au début (29$), mais les coûts explosent rapidement
+            avec le volume de tâches. NovaMind propose un forfait fixe à 299€ adapté aux entreprises qui ont du volume,
+            sans mauvaise surprise à la fin du mois.
+          </p>
+        </details>
+        <details>
+          <summary>Puis-je migrer mes workflows depuis Make ou Zapier ?</summary>
+          <p>
+            Oui ! Dans le cadre de notre garantie de migration gratuite, nos experts vous aident à reconstruire vos
+            workflows critiques sur NovaMind lors de votre onboarding.
+          </p>
+        </details>
+        <details>
+          <summary>NovaMind a-t-il toutes les intégrations dont j'ai besoin ?</summary>
+          <p>
+            Nous couvrons actuellement 54 intégrations majeures (Salesforce, HubSpot, Gmail, Slack, etc.) qui
+            représentent 90% des besoins PME. Si une intégration manque, notre API ouverte permet de la connecter, ou
+            nous pouvons l'ajouter à notre roadmap.
+          </p>
+        </details>
+        <details>
+          <summary>Quelle est la différence avec n8n (open-source) ?</summary>
+          <p>
+            n8n est un outil puissant mais technique, souvent destiné aux développeurs ou à l'auto-hébergement. NovaMind
+            est une solution clé en main, sécurisée et maintenue, conçue pour les équipes opérationnelles (Ops, RH,
+            Sales) sans besoin de coder.
+          </p>
+        </details>
+        <details>
+          <summary>Le support en français est-il vraiment meilleur ?</summary>
+          <p>
+            Absolument. Pas de barrière de la langue, pas de décalage horaire (UTC+1). Nous comprenons les spécificités
+            du marché français (facturation, législation) et répondons en moyenne en moins de 2 heures.
+          </p>
+        </details>
+        <details>
+          <summary>NovaMind est-il adapté aux grandes entreprises ?</summary>
+          <p>
+            Oui, notre plan Executive et nos offres Enterprise supportent des volumes massifs, le SSO, et des SLAs
+            spécifiques. Des groupes comme Airbus utilisent déjà nos technologies.
+          </p>
+        </details>
+        <details>
+          <summary>Puis-je tester NovaMind gratuitement ?</summary>
+          <p>
+            Oui, nous proposons une période d'essai de 30 jours, satisfaits ou remboursés, pour vous permettre de
+            valider le ROI sur vos propres processus.
+          </p>
+        </details>
+        <details>
+          <summary>Comment se passe l'onboarding ?</summary>
+          <p>
+            Dès la souscription, un Customer Success Manager vous est dédié. Il organise un appel de lancement, audit
+            vos besoins et vous aide à mettre en production votre premier workflow.
+          </p>
+        </details>
+      </div>
+
+      <!-- CTA Section -->
+      <div class="cta-section">
+        <h2 class="cta-title">Prêt à découvrir la différence NovaMind ?</h2>
+        <div class="cta-buttons">
+          <a href="#" class="btn btn-white">
+            <i class="fas fa-file-pdf" style="margin-right: 8px"></i> Comparer en détail (PDF)
+          </a>
+          <a href="#" class="btn btn-dark">
+            <i class="fas fa-calendar-check" style="margin-right: 8px"></i> Essai 30 jours gratuit
+          </a>
+          <a href="#" class="btn btn-outline">
+            <i class="fas fa-comment-dots" style="margin-right: 8px"></i> Parler à un expert
+          </a>
+        </div>
+        <p class="guarantee">
+          <i class="fas fa-shield-check"></i> Garantie : Migration gratuite depuis Zapier/Make incluse
+        </p>
+        <p style="margin-top: 2rem; font-size: 0.9rem; opacity: 0.8">
+          Rejoignez les entreprises qui ont fait le choix français 🇫🇷
+        </p>
+      </div>
+    </main>
+
+    <footer style="text-align: center; padding: 2rem; background: #f8fafc; color: var(--secondary); font-size: 0.9rem">
+      <p>
+        &copy; 2026 NovaLinkOS SAS - Tous droits réservés. <a href="#">Mentions Légales</a> |
+        <a href="#">Confidentialité</a>
+      </p>
+    </footer>
+  <script defer src="https://static.cloudflareinsights.com/beacon.min.js/vcd15cbe7772f49c399c6a5babf22c1241717689176015" integrity="sha512-ZpsOmlRQV6y907TI0dKBHq9Md29nnaEIPlkf84rnaERnq6zvWvPUqr2ft8M1aS28oN72PdrCzSjY4U6VaAw1EQ==" data-cf-beacon='{"rayId":"9badb0644d6d43a8","serverTiming":{"name":{"cfExtPri":true,"cfEdge":true,"cfOrigin":true,"cfL4":true,"cfSpeedBrain":true,"cfCacheStatus":true}},"version":"2025.9.1","token":"4edd5f8ec12a48cfa682ab8261b80a79"}' crossorigin="anonymous"></script>
+</body>
+</html>

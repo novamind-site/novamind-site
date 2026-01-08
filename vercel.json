@@ -1,0 +1,61 @@
+﻿{
+  "version": 2,
+  "name": "novamind-site",
+  "builds": [
+    {
+      "src": "**/*.html",
+      "use": "@vercel/static"
+    }
+  ],
+  "routes": [
+    { 
+      "src": "/tarification", 
+      "dest": "/pages/tarification.html",
+      "headers": {
+        "cache-control": "s-maxage=31536000"
+      }
+    },
+    { 
+      "src": "/comparaison", 
+      "dest": "/pages/comparaison.html",
+      "headers": {
+        "cache-control": "s-maxage=31536000"
+      }
+    },
+    { 
+      "src": "/pricing", 
+      "dest": "/pages/tarification.html" 
+    },
+    { 
+      "src": "/vs-competitors", 
+      "dest": "/pages/comparaison.html" 
+    },
+    { 
+      "src": "/(.*)", 
+      "dest": "/\",
+      "headers": {
+        "X-Frame-Options": "DENY",
+        "X-Content-Type-Options": "nosniff"
+      }
+    }
+  ],
+  "headers": [
+    {
+      "source": "/(.*)",
+      "headers": [
+        {
+          "key": "X-Frame-Options",
+          "value": "DENY"
+        },
+        {
+          "key": "X-Content-Type-Options",
+          "value": "nosniff"
+        },
+        {
+          "key": "Referrer-Policy",
+          "value": "origin-when-cross-origin"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,1097 @@
+<!DOCTYPE html>
+<html lang="fr" data-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tarifs NovaMind - Automatisation Intelligente</title>
+    <meta
+      name="description"
+      content="Découvrez les tarifs de NovaMind. Plans flexibles pour PME et grandes entreprises. Essai gratuit 30 jours, sans engagement."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <style>
+      :root {
+        --primary: #2563eb;
+        --primary-dark: #1d4ed8;
+        --primary-light: #eff6ff;
+        --success: #10b981;
+        --text-main: #111827;
+        --text-secondary: #4b5563;
+        --bg-light: #f9fafb;
+        --bg-white: #ffffff;
+        --border: #e5e7eb;
+        --radius: 0.75rem;
+        --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+        --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+        --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+      }
+
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+
+      body {
+        font-family:
+          'Inter',
+          system-ui,
+          -apple-system,
+          sans-serif;
+        color: var(--text-main);
+        background-color: var(--bg-white);
+        line-height: 1.5;
+        -webkit-font-smoothing: antialiased;
+      }
+
+      /* Utilities */
+      .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 1.5rem;
+      }
+
+      .text-center {
+        text-align: center;
+      }
+      .text-primary {
+        color: var(--primary);
+      }
+      .text-success {
+        color: var(--success);
+      }
+      .font-bold {
+        font-weight: 700;
+      }
+      .mb-2 {
+        margin-bottom: 0.5rem;
+      }
+      .mb-4 {
+        margin-bottom: 1rem;
+      }
+      .mb-8 {
+        margin-bottom: 2rem;
+      }
+      .mb-12 {
+        margin-bottom: 3rem;
+      }
+
+      /* Buttons */
+      .btn {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        padding: 0.75rem 2rem;
+        border-radius: 0.5rem;
+        font-weight: 600;
+        text-decoration: none;
+        transition: all 0.2s ease;
+        cursor: pointer;
+        border: none;
+        font-size: 1rem;
+      }
+
+      .btn-primary {
+        background-color: var(--primary);
+        color: white;
+      }
+      .btn-primary:hover {
+        background-color: var(--primary-dark);
+        transform: translateY(-1px);
+      }
+
+      .btn-secondary {
+        background-color: white;
+        color: var(--primary);
+        border: 1px solid var(--primary);
+      }
+      .btn-secondary:hover {
+        background-color: var(--primary-light);
+      }
+
+      .btn-outline {
+        background-color: transparent;
+        color: white;
+        border: 2px solid rgba(255, 255, 255, 0.3);
+      }
+      .btn-outline:hover {
+        background-color: rgba(255, 255, 255, 0.1);
+        border-color: white;
+      }
+
+      .btn-white {
+        background-color: white;
+        color: var(--primary);
+      }
+      .btn-white:hover {
+        background-color: var(--bg-light);
+      }
+
+      /* Hero Section */
+      .hero {
+        padding: 5rem 0 4rem;
+        text-align: center;
+      }
+
+      .hero h1 {
+        font-size: 3rem;
+        font-weight: 800;
+        margin-bottom: 1.5rem;
+        letter-spacing: -0.025em;
+      }
+
+      .hero p {
+        font-size: 1.25rem;
+        color: var(--text-secondary);
+        max-width: 600px;
+        margin: 0 auto 2.5rem;
+      }
+
+      .hero-cta {
+        display: flex;
+        gap: 1rem;
+        justify-content: center;
+        flex-wrap: wrap;
+      }
+
+      /* Pricing Grid */
+      .pricing-section {
+        padding-bottom: 5rem;
+      }
+
+      .pricing-grid {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        gap: 2rem;
+        margin-top: 3rem;
+        align-items: start;
+      }
+
+      @media (min-width: 768px) {
+        .pricing-grid {
+          grid-template-columns: repeat(2, 1fr);
+        }
+      }
+
+      @media (min-width: 1024px) {
+        .pricing-grid {
+          grid-template-columns: repeat(3, 1fr);
+        }
+      }
+
+      .card {
+        background: white;
+        border: 1px solid var(--border);
+        border-radius: var(--radius);
+        padding: 2rem;
+        position: relative;
+        transition: all 0.3s ease;
+        box-shadow: var(--shadow);
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+      }
+
+      .card:hover {
+        box-shadow: var(--shadow-xl);
+        transform: translateY(-5px);
+      }
+
+      /* Executive Card Special Styles */
+      .card.featured {
+        border: 2px solid var(--primary);
+        background: linear-gradient(to bottom, #f5f9ff, #ffffff);
+        transform: scale(1.02);
+        z-index: 2;
+        box-shadow: var(--shadow-lg);
+      }
+      .card.featured:hover {
+        transform: scale(1.02) translateY(-5px);
+      }
+
+      .badge {
+        display: inline-block;
+        padding: 0.25rem 0.75rem;
+        border-radius: 9999px;
+        font-size: 0.875rem;
+        font-weight: 600;
+        margin-bottom: 1rem;
+      }
+      .badge-gray {
+        background: var(--bg-light);
+        color: var(--text-secondary);
+        border: 1px solid var(--border);
+      }
+      .badge-blue {
+        background: var(--primary);
+        color: white;
+      }
+      .badge-dark {
+        background: #1f2937;
+        color: white;
+      }
+
+      .price {
+        font-size: 2.5rem;
+        font-weight: 800;
+        color: var(--text-main);
+        margin: 1rem 0;
+      }
+      .price span {
+        font-size: 1rem;
+        font-weight: 500;
+        color: var(--text-secondary);
+      }
+
+      .features-list {
+        list-style: none;
+        margin: 2rem 0;
+        flex-grow: 1;
+      }
+      .features-list li {
+        display: flex;
+        align-items: flex-start;
+        gap: 0.75rem;
+        margin-bottom: 1rem;
+        font-size: 0.95rem;
+        color: var(--text-secondary);
+      }
+      .check-icon {
+        color: var(--success);
+        flex-shrink: 0;
+      }
+
+      .card-footer {
+        margin-top: auto;
+        text-align: center;
+      }
+      .card-note {
+        display: block;
+        margin-top: 0.75rem;
+        font-size: 0.875rem;
+        color: var(--text-secondary);
+      }
+
+      /* Comparison Table */
+      .comparison-section {
+        padding: 4rem 0;
+        background: var(--bg-light);
+        border-top: 1px solid var(--border);
+        border-bottom: 1px solid var(--border);
+      }
+
+      .table-container {
+        overflow-x: auto;
+        border-radius: var(--radius);
+        box-shadow: var(--shadow);
+        background: white;
+      }
+
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        min-width: 800px;
+      }
+
+      th,
+      td {
+        padding: 1rem 1.5rem;
+        text-align: center;
+        border-bottom: 1px solid var(--border);
+      }
+
+      th:first-child,
+      td:first-child {
+        text-align: left;
+        font-weight: 600;
+        position: sticky;
+        left: 0;
+        background: white;
+        z-index: 10;
+      }
+
+      th {
+        background: #f9fafb;
+        font-weight: 700;
+        color: var(--text-main);
+      }
+
+      thead th {
+        position: sticky;
+        top: 0;
+        z-index: 20;
+      }
+
+      thead th:first-child {
+        z-index: 30; /* Corner overlap */
+      }
+
+      /* ROI Calculator */
+      .roi-section {
+        padding: 5rem 0;
+        background: white;
+      }
+
+      .calculator-grid {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 3rem;
+        margin-top: 2rem;
+      }
+
+      @media (min-width: 768px) {
+        .calculator-grid {
+          grid-template-columns: 1fr 1fr;
+        }
+      }
+
+      .calc-inputs {
+        background: var(--bg-light);
+        padding: 2rem;
+        border-radius: var(--radius);
+      }
+
+      .input-group {
+        margin-bottom: 2rem;
+      }
+      .input-label {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 0.5rem;
+        font-weight: 600;
+      }
+
+      input[type='range'] {
+        width: 100%;
+        height: 6px;
+        background: #d1d5db;
+        border-radius: 5px;
+        outline: none;
+        -webkit-appearance: none;
+      }
+      input[type='range']::-webkit-slider-thumb {
+        -webkit-appearance: none;
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        background: var(--primary);
+        cursor: pointer;
+        transition: background 0.15s ease-in-out;
+      }
+
+      .calc-results {
+        background: var(--primary);
+        color: white;
+        padding: 2rem;
+        border-radius: var(--radius);
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+      }
+
+      .result-row {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 1rem;
+        padding-bottom: 1rem;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+      }
+      .result-row:last-child {
+        border-bottom: none;
+      }
+
+      .big-result {
+        font-size: 2.5rem;
+        font-weight: 800;
+        color: #ffffff;
+        margin: 0.5rem 0;
+      }
+
+      /* Universal Features */
+      .universal-features {
+        padding: 5rem 0;
+        background: var(--bg-light);
+      }
+
+      .features-grid {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 2rem;
+      }
+      @media (min-width: 768px) {
+        .features-grid {
+          grid-template-columns: repeat(2, 1fr);
+        }
+      }
+
+      .feature-item {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        background: white;
+        padding: 1rem;
+        border-radius: 0.5rem;
+        box-shadow: var(--shadow);
+      }
+      .feature-icon {
+        font-size: 1.5rem;
+      }
+
+      /* FAQ */
+      .faq-section {
+        padding: 5rem 0;
+        max-width: 800px;
+        margin: 0 auto;
+      }
+
+      details {
+        background: white;
+        border: 1px solid var(--border);
+        border-radius: 0.5rem;
+        margin-bottom: 1rem;
+        overflow: hidden;
+      }
+
+      summary {
+        padding: 1.25rem;
+        font-weight: 600;
+        cursor: pointer;
+        list-style: none;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      summary::-webkit-details-marker {
+        display: none;
+      }
+
+      summary:after {
+        content: '+';
+        font-size: 1.5rem;
+        color: var(--primary);
+      }
+
+      details[open] summary:after {
+        content: '-';
+      }
+
+      details[open] summary {
+        border-bottom: 1px solid var(--border);
+      }
+
+      .faq-content {
+        padding: 1.25rem;
+        color: var(--text-secondary);
+        background: #f9fafb;
+      }
+
+      /* Final CTA */
+      .final-cta {
+        background: linear-gradient(135deg, #2563eb 0%, #1d4ed8 100%);
+        color: white;
+        padding: 5rem 0;
+        text-align: center;
+      }
+
+      .cta-buttons {
+        display: flex;
+        gap: 1rem;
+        justify-content: center;
+        margin: 2rem 0;
+        flex-wrap: wrap;
+      }
+
+      .guarantees {
+        display: flex;
+        gap: 1.5rem;
+        justify-content: center;
+        flex-wrap: wrap;
+        margin-top: 2rem;
+        font-size: 0.9rem;
+        opacity: 0.9;
+      }
+
+      /* Enterprise Form */
+      .enterprise-section {
+        padding: 5rem 0;
+        background: #f3f4f6;
+      }
+
+      .enterprise-container {
+        background: white;
+        padding: 3rem;
+        border-radius: var(--radius);
+        box-shadow: var(--shadow-lg);
+        max-width: 800px;
+        margin: 0 auto;
+      }
+
+      .form-grid {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 1rem;
+        margin-top: 2rem;
+      }
+      @media (min-width: 768px) {
+        .form-grid {
+          grid-template-columns: 1fr 1fr;
+        }
+      }
+
+      input,
+      textarea {
+        width: 100%;
+        padding: 0.75rem;
+        border: 1px solid #d1d5db;
+        border-radius: 0.5rem;
+        font-family: inherit;
+      }
+      textarea {
+        resize: vertical;
+        min-height: 100px;
+      }
+
+      .full-width {
+        grid-column: 1 / -1;
+      }
+
+      /* Footer */
+      footer {
+        text-align: center;
+        padding: 2rem;
+        color: var(--text-secondary);
+        border-top: 1px solid var(--border);
+        font-size: 0.875rem;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- HERO SECTION -->
+    <section class="hero container">
+      <h1>Tarifs simples, valeur mesurable</h1>
+      <p>Choisissez le plan adapté à votre entreprise. Sans engagement, annulation en 1 clic.</p>
+      <div class="hero-cta">
+        <a href="#" class="btn btn-primary">Démarrer l'essai gratuit 30 jours</a>
+        <a href="#enterprise" class="btn btn-secondary">Parler à un expert</a>
+      </div>
+    </section>
+
+    <!-- PRICING CARDS -->
+    <section class="pricing-section container">
+      <div class="pricing-grid">
+        <!-- ESSENTIALS -->
+        <div class="card">
+          <div class="badge badge-gray">Idéal pour débuter</div>
+          <h3>Essentials</h3>
+          <div class="price">299€<span>/mois</span></div>
+          <p class="mb-4 text-secondary" style="color: #6b7280">1-50 employés</p>
+
+          <a href="#" class="btn btn-secondary">Essayer gratuitement 30 jours</a>
+          <span class="card-note">Aucune carte bancaire requise</span>
+
+          <ul class="features-list">
+            <li><span class="check-icon">✔</span> 10 workflows actifs</li>
+            <li><span class="check-icon">✔</span> 1,000 tâches auto./mois</li>
+            <li><span class="check-icon">✔</span> 20 intégrations premium</li>
+            <li><span class="check-icon">✔</span> Support email (<24h)</li>
+            <li><span class="check-icon">✔</span> Onboarding self-service</li>
+            <li><span class="check-icon">✔</span> Tableaux de bord analytics</li>
+            <li><span class="check-icon">✔</span> SLA 99.5%</li>
+            <li><span class="check-icon">✔</span> Hébergement Europe</li>
+            <li><span class="check-icon">✔</span> Conformité RGPD</li>
+          </ul>
+        </div>
+
+        <!-- EXECUTIVE -->
+        <div class="card featured">
+          <div class="badge badge-blue">Le plus populaire</div>
+          <h3>Executive</h3>
+          <div class="price text-primary">599€<span>/mois</span></div>
+          <p class="mb-4 text-secondary" style="color: #6b7280">51-500 employés</p>
+
+          <a href="#" class="btn btn-primary">Démarrer avec Executive</a>
+          <span class="card-note">Le choix de 80% de nos clients</span>
+
+          <ul class="features-list">
+            <li><span class="check-icon">✔</span> <strong>Tout d'Essentials +</strong></li>
+            <li><span class="check-icon">✔</span> Workflows illimités</li>
+            <li><span class="check-icon">✔</span> 10,000 tâches/mois</li>
+            <li><span class="check-icon">✔</span> 54 intégrations (toutes)</li>
+            <li><span class="check-icon">✔</span> Support prioritaire FR (<2h)</li>
+            <li><span class="check-icon">✔</span> Onboarding VIP 30 jours</li>
+            <li><span class="check-icon">✔</span> API REST complète</li>
+            <li><span class="check-icon">✔</span> Webhooks illimités</li>
+            <li><span class="check-icon">✔</span> Workflows sur-mesure</li>
+            <li><span class="check-icon">✔</span> Analytics avancées + exports</li>
+            <li><span class="check-icon">✔</span> SLA 99.9%</li>
+            <li><span class="check-icon">✔</span> Migration gratuite Zapier</li>
+          </ul>
+        </div>
+
+        <!-- ENTERPRISE -->
+        <div class="card">
+          <div class="badge badge-dark">Maximum de puissance</div>
+          <h3>Enterprise</h3>
+          <div class="price">Sur devis</div>
+          <p class="mb-4 text-secondary" style="color: #6b7280">500+ employés</p>
+
+          <a href="#enterprise" class="btn btn-secondary">Obtenir un devis</a>
+          <span class="card-note">Réponse sous 24h</span>
+
+          <ul class="features-list">
+            <li><span class="check-icon">✔</span> <strong>Tout d'Executive +</strong></li>
+            <li><span class="check-icon">✔</span> Tâches illimitées</li>
+            <li><span class="check-icon">✔</span> Intégrations custom</li>
+            <li><span class="check-icon">✔</span> Support dédié 24/7</li>
+            <li><span class="check-icon">✔</span> Self-hosting (2027)</li>
+            <li><span class="check-icon">✔</span> SSO/SAML</li>
+            <li><span class="check-icon">✔</span> SLA 99.97% avec pénalités</li>
+            <li><span class="check-icon">✔</span> Account manager dédié</li>
+            <li><span class="check-icon">✔</span> Audit & conformité</li>
+            <li><span class="check-icon">✔</span> Formation sur site</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- TABLEAU COMPARATIF -->
+    <section class="comparison-section">
+      <div class="container">
+        <h2 class="text-center mb-8">Comparatif détaillé</h2>
+        <div class="table-container">
+          <table>
+            <thead>
+              <tr>
+                <th>Fonctionnalités</th>
+                <th>Essentials</th>
+                <th>Executive</th>
+                <th>Enterprise</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Workflows actifs</td>
+                <td>10</td>
+                <td><strong>Illimités</strong></td>
+                <td><strong>Illimités</strong></td>
+              </tr>
+              <tr>
+                <td>Tâches/mois</td>
+                <td>1,000</td>
+                <td>10,000</td>
+                <td><strong>Illimitées</strong></td>
+              </tr>
+              <tr>
+                <td>Intégrations</td>
+                <td>20</td>
+                <td>54 (Toutes)</td>
+                <td>54 + Custom</td>
+              </tr>
+              <tr>
+                <td>Support</td>
+                <td>Email 24h</td>
+                <td>Prioritaire <2h</td>
+                <td>Dédié 24/7</td>
+              </tr>
+              <tr>
+                <td>Onboarding</td>
+                <td>Self-service</td>
+                <td>VIP 30j</td>
+                <td>Sur-mesure</td>
+              </tr>
+              <tr>
+                <td>API</td>
+                <td>❌</td>
+                <td>✅ Complète</td>
+                <td>✅ Complète</td>
+              </tr>
+              <tr>
+                <td>Webhooks</td>
+                <td>❌</td>
+                <td>✅ Illimités</td>
+                <td>✅ Illimités</td>
+              </tr>
+              <tr>
+                <td>SLA</td>
+                <td>99.5%</td>
+                <td>99.9%</td>
+                <td>99.97%</td>
+              </tr>
+              <tr>
+                <td>SSO/SAML</td>
+                <td>❌</td>
+                <td>❌</td>
+                <td>✅</td>
+              </tr>
+              <tr>
+                <td>Account manager</td>
+                <td>❌</td>
+                <td>❌</td>
+                <td>✅</td>
+              </tr>
+              <tr>
+                <td>Self-hosting</td>
+                <td>❌</td>
+                <td>❌</td>
+                <td>✅ (2027)</td>
+              </tr>
+              <tr>
+                <td>Migration gratuite</td>
+                <td>❌</td>
+                <td>✅</td>
+                <td>✅</td>
+              </tr>
+              <tr>
+                <td>Analytics</td>
+                <td>Basic</td>
+                <td>Avancées</td>
+                <td>Entreprise</td>
+              </tr>
+              <tr>
+                <td>Workflows custom</td>
+                <td>❌</td>
+                <td>✅</td>
+                <td>✅ Prioritaires</td>
+              </tr>
+              <tr>
+                <td>Formation équipe</td>
+                <td>Vidéos</td>
+                <td>2h live</td>
+                <td>Sur site</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- ROI CALCULATOR -->
+    <section class="roi-section">
+      <div class="container">
+        <h2 class="text-center">Calculez votre retour sur investissement</h2>
+        <p class="text-center text-secondary">Basé sur nos 6 cas clients (ROI moyen x5.2)</p>
+
+        <div class="calculator-grid">
+          <div class="calc-inputs">
+            <div class="input-group">
+              <div class="input-label">
+                <label>Nombre d'employés</label>
+                <span id="display-employees">100</span>
+              </div>
+              <input type="range" id="input-employees" min="10" max="1000" value="100" step="10" />
+            </div>
+
+            <div class="input-group">
+              <div class="input-label">
+                <label>Heures admin/employé/semaine</label>
+                <span id="display-hours">5h</span>
+              </div>
+              <input type="range" id="input-hours" min="2" max="10" value="5" step="0.5" />
+            </div>
+
+            <p class="text-secondary" style="font-size: 0.9rem">
+              <i>Hypothèses: Salaire moyen chargé 40€/h, gain de productivité estimé 15%.</i>
+            </p>
+          </div>
+
+          <div class="calc-results">
+            <div>
+              <div class="result-row">
+                <span>Temps admin total/an:</span>
+                <span id="result-time" class="font-bold">26,000 h</span>
+              </div>
+              <div class="result-row">
+                <span>Coût actuel annuel:</span>
+                <span id="result-cost">1,040,000 €</span>
+              </div>
+              <div class="result-row">
+                <span>Plan recommandé:</span>
+                <span id="result-plan" style="color: #ffd700; font-weight: bold">Executive</span>
+              </div>
+            </div>
+
+            <div style="margin-top: 2rem; border-top: 2px solid rgba(255, 255, 255, 0.3); padding-top: 1rem">
+              <span>Économies nettes annuelles estimées:</span>
+              <div class="big-result" id="result-savings">148,812 €</div>
+              <div style="display: flex; justify-content: space-between; align-items: center">
+                <span class="badge badge-dark" style="background: rgba(0, 0, 0, 0.3)"
+                  >ROI x<span id="result-ratio">20.7</span></span
+                >
+                <a href="#" style="color: white; text-decoration: underline; font-size: 0.9rem">Voir les cas clients</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FEATURES UNIVERSELLES -->
+    <section class="universal-features">
+      <div class="container">
+        <h2 class="text-center mb-12">Inclus dans tous les plans</h2>
+        <div class="features-grid">
+          <div class="feature-item"><span class="feature-icon">🇫🇷</span> Équipe & support 100% français</div>
+          <div class="feature-item"><span class="feature-icon">🔒</span> Hébergement Europe (Paris, Francfort)</div>
+          <div class="feature-item"><span class="feature-icon">🛡️</span> Conformité RGPD native</div>
+          <div class="feature-item"><span class="feature-icon">🎓</span> Documentation complète & guides</div>
+          <div class="feature-item"><span class="feature-icon">📊</span> Analytics incluses</div>
+          <div class="feature-item"><span class="feature-icon">🔄</span> Mises à jour automatiques</div>
+          <div class="feature-item"><span class="feature-icon">💳</span> Facturation mensuelle sans engagement</div>
+          <div class="feature-item"><span class="feature-icon">📱</span> Interface web + mobile responsive</div>
+          <div class="feature-item"><span class="feature-icon">🚀</span> Nouvelles intégrations mensuelles</div>
+          <div class="feature-item"><span class="feature-icon">✅</span> Essai 30 jours gratuit</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="faq-section container">
+      <h2 class="text-center mb-8">Questions fréquentes</h2>
+
+      <details>
+        <summary>Puis-je changer de plan à tout moment ?</summary>
+        <div class="faq-content">
+          Oui, l'upgrade ou le downgrade est instantané. La facturation est ajustée automatiquement au prorata des jours
+          restants.
+        </div>
+      </details>
+
+      <details>
+        <summary>Y a-t-il des frais cachés ?</summary>
+        <div class="faq-content">
+          Non. Le prix affiché est le prix final. Il n'y a pas de frais de mise en place, pas de frais pour l'API ou les
+          webhooks, et le prix n'est pas par utilisateur (utilisateurs illimités sur tous les plans).
+        </div>
+      </details>
+
+      <details>
+        <summary>Que se passe-t-il si je dépasse ma limite de tâches ?</summary>
+        <div class="faq-content">
+          Vous recevrez des alertes à 80% et 100%. Au-delà, nous appliquons une "soft limit" (vos workflows continuent
+          mais peuvent être ralentis) et nous vous proposerons un upgrade. Nous ne coupons jamais le service
+          brutalement.
+        </div>
+      </details>
+
+      <details>
+        <summary>Comment fonctionne l'essai gratuit 30 jours ?</summary>
+        <div class="faq-content">
+          Vous avez accès complet au plan Essentials ou Executive pendant 30 jours. Aucune carte bancaire n'est requise
+          pour démarrer. À la fin, vous pouvez choisir de vous abonner ou d'exporter vos données gratuitement.
+        </div>
+      </details>
+
+      <details>
+        <summary>Proposez-vous des réductions pour associations/éducation ?</summary>
+        <div class="faq-content">
+          Oui, nous offrons -30% pour les associations, écoles et universités. Contactez-nous à <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="d0a3b1bcb5a390bebfa6b1bcb9bebbbfa3feb3bfbd">[email&#160;protected]</a>.
+        </div>
+      </details>
+
+      <details>
+        <summary>La migration depuis Zapier/Make est-elle vraiment gratuite ?</summary>
+        <div class="faq-content">
+          Oui pour les plans Executive et Enterprise. Notre équipe d'experts analyse vos workflows existants et les
+          recrée sur NovaMind sous 7 à 10 jours. Cela fait partie de notre onboarding VIP.
+        </div>
+      </details>
+
+      <details>
+        <summary>Puis-je annuler à tout moment ?</summary>
+        <div class="faq-content">
+          Oui, l'annulation se fait en 1 clic depuis votre tableau de bord. Vous pouvez choisir que l'effet soit
+          immédiat ou à la fin du mois en cours. Vous pourrez récupérer toutes vos données.
+        </div>
+      </details>
+
+      <details>
+        <summary>Quelle est votre politique de remboursement ?</summary>
+        <div class="faq-content">
+          Satisfait ou remboursé pendant les 30 premiers jours de votre abonnement payant. Aucune question posée.
+        </div>
+      </details>
+
+      <details>
+        <summary>Proposez-vous des contrats annuels ?</summary>
+        <div class="faq-content">
+          C'est prévu pour le Q2 2026 avec une réduction de -15%. Actuellement, nous proposons uniquement des forfaits
+          mensuels pour vous offrir une flexibilité maximale pendant notre phase de lancement.
+        </div>
+      </details>
+    </section>
+
+    <!-- FINAL CTA -->
+    <section class="final-cta">
+      <div class="container">
+        <h2 style="color: white; margin-bottom: 1rem">Prêt à automatiser votre entreprise ?</h2>
+        <p style="margin-bottom: 2rem; opacity: 0.9; font-size: 1.2rem">
+          Rejoignez les entreprises qui ont économisé de 340,000€ à 3.9M€/an grâce à NovaMind
+        </p>
+
+        <div class="cta-buttons">
+          <a href="#" class="btn btn-white">Démarrer l'essai gratuit</a>
+          <a href="#" class="btn btn-outline">Comparer les plans PDF</a>
+          <a href="#" class="btn btn-outline">Planifier une démo</a>
+        </div>
+
+        <div class="guarantees">
+          <span>✅ Essai 30 jours gratuit</span>
+          <span>✅ Migration gratuite</span>
+          <span>✅ Onboarding VIP</span>
+          <span>✅ Satisfait ou remboursé</span>
+          <span>✅ Support FR &lt;2h</span>
+        </div>
+
+        <div style="margin-top: 3rem; padding-top: 2rem; border-top: 1px solid rgba(255, 255, 255, 0.2)">
+          <p style="font-weight: 600; margin-bottom: 0.5rem">10 pilotes gratuits disponibles ce trimestre (Q1 2026)</p>
+          <p style="font-size: 0.9rem; opacity: 0.8">
+            Économies démontrées: 7.14M€/an cumulés • Santé • Finance • Industrie
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ENTERPRISE FORM -->
+    <section id="enterprise" class="enterprise-section">
+      <div class="container">
+        <div class="enterprise-container">
+          <h2 class="text-center mb-4">Besoin d'un plan sur-mesure ?</h2>
+          <div class="form-grid">
+            <div>
+              <h4 class="mb-4">Vos besoins spécifiques :</h4>
+              <ul class="features-list">
+                <li><span class="check-icon">🔹</span> 500+ employés</li>
+                <li><span class="check-icon">🔹</span> Multi-entités / Filiales</li>
+                <li><span class="check-icon">🔹</span> Conformité HDS / HIPAA</li>
+                <li><span class="check-icon">🔹</span> Self-hosting requis</li>
+                <li><span class="check-icon">🔹</span> Intégrations sur-mesure</li>
+                <li><span class="check-icon">🔹</span> Budget > 50k€/an</li>
+              </ul>
+            </div>
+            <div>
+              <form
+                onsubmit="
+                  event.preventDefault();
+                  alert('Merci ! Notre équipe Enterprise vous recontactera sous 24h.');
+                "
+              >
+                <div class="mb-4">
+                  <label class="block mb-2 text-sm font-bold">Nom complet</label>
+                  <input type="text" placeholder="Jean Dupont" required />
+                </div>
+                <div class="mb-4">
+                  <label class="block mb-2 text-sm font-bold">Email professionnel</label>
+                  <input type="email" placeholder="jean@entreprise.com" required />
+                </div>
+                <div class="form-grid" style="margin-top: 0; gap: 1rem">
+                  <div class="mb-4">
+                    <label class="block mb-2 text-sm font-bold">Entreprise</label>
+                    <input type="text" placeholder="Nom société" required />
+                  </div>
+                  <div class="mb-4">
+                    <label class="block mb-2 text-sm font-bold">Effectif</label>
+                    <input type="number" placeholder="ex: 750" required />
+                  </div>
+                </div>
+                <div class="mb-4">
+                  <label class="block mb-2 text-sm font-bold">Message</label>
+                  <textarea placeholder="Décrivez votre projet..." rows="3"></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary" style="width: 100%">
+                  Contactez notre équipe Enterprise
+                </button>
+                <p class="text-center text-sm text-secondary mt-2">Réponse sous 24h</p>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <p>&copy; 2026 NovaLinkos SAS. Tous droits réservés. Paris, France.</p>
+    </footer>
+
+    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+      // ROI Calculator Logic
+      const employeesInput = document.getElementById('input-employees');
+      const hoursInput = document.getElementById('input-hours');
+
+      const displayEmployees = document.getElementById('display-employees');
+      const displayHours = document.getElementById('display-hours');
+
+      const resultTime = document.getElementById('result-time');
+      const resultCost = document.getElementById('result-cost');
+      const resultSavings = document.getElementById('result-savings');
+      const resultRatio = document.getElementById('result-ratio');
+      const resultPlan = document.getElementById('result-plan');
+
+      function formatCurrency(num) {
+        return new Intl.NumberFormat('fr-FR', { style: 'currency', currency: 'EUR', maximumFractionDigits: 0 }).format(
+          num,
+        );
+      }
+
+      function calculateROI() {
+        const employees = parseInt(employeesInput.value);
+        const hoursPerWeek = parseFloat(hoursInput.value);
+
+        // Update displays
+        displayEmployees.textContent = employees;
+        displayHours.textContent = hoursPerWeek + 'h';
+
+        // Constants
+        const weeksPerYear = 52;
+        const hourlyRate = 40; // € chargé
+        const productivityGain = 0.15; // 15%
+
+        // Calculations
+        const totalHoursPerYear = employees * hoursPerWeek * weeksPerYear;
+        const currentTotalCost = totalHoursPerYear * hourlyRate;
+        const annualSavings = currentTotalCost * productivityGain;
+
+        // Plan cost calculation
+        let planCost = 0;
+        let planName = '';
+
+        if (employees <= 50) {
+          planCost = 299 * 12;
+          planName = 'Essentials';
+        } else if (employees <= 500) {
+          planCost = 599 * 12;
+          planName = 'Executive';
+        } else {
+          // Enterprise estimate logic for calculator (base 1500 + 2€/employee/mo just for rough estimate)
+          // This is purely for the calculator demo visuals
+          planCost = (1000 + employees * 2) * 12;
+          planName = 'Enterprise (Estimé)';
+        }
+
+        const netSavings = annualSavings - planCost;
+        const roiRatio = netSavings / planCost;
+
+        // Update DOM
+        resultTime.textContent = new Intl.NumberFormat('fr-FR').format(totalHoursPerYear) + ' h';
+        resultCost.textContent = formatCurrency(currentTotalCost);
+        resultSavings.textContent = formatCurrency(netSavings);
+        resultRatio.textContent = roiRatio.toFixed(1);
+        resultPlan.textContent = planName;
+      }
+
+      // Event Listeners
+      employeesInput.addEventListener('input', calculateROI);
+      hoursInput.addEventListener('input', calculateROI);
+
+      // Initial Calc
+      calculateROI();
+    </script>
+  <script defer src="https://static.cloudflareinsights.com/beacon.min.js/vcd15cbe7772f49c399c6a5babf22c1241717689176015" integrity="sha512-ZpsOmlRQV6y907TI0dKBHq9Md29nnaEIPlkf84rnaERnq6zvWvPUqr2ft8M1aS28oN72PdrCzSjY4U6VaAw1EQ==" data-cf-beacon='{"rayId":"9badac838d6d2c31","serverTiming":{"name":{"cfExtPri":true,"cfEdge":true,"cfOrigin":true,"cfL4":true,"cfSpeedBrain":true,"cfCacheStatus":true}},"version":"2025.9.1","token":"4edd5f8ec12a48cfa682ab8261b80a79"}' crossorigin="anonymous"></script>
+</body>
+</html>
