@@ -1,19 +1,17 @@
 <!DOCTYPE html>
-<!-- saved from url=(0044)https://www.genspark.ai/api/files/s/xHkmijWE -->
+<!-- saved from url=(0044)https://www.genspark.ai/api/files/s/4XeMPcBb -->
 <html lang="fr" data-theme="light"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NovaMind - Automatisez Votre Entreprise</title>
+    <title>NovaMind - Automatisez Votre Entreprise (9.8/10)</title>
     <meta name="description" content="NovaMind connecte vos outils, exécute vos processus et délivre des résultats mesurables. Plateforme d&#39;automatisation intelligente internationale.">
 
     <!-- Fonts & Icons -->
     <link rel="preconnect" href="https://fonts.googleapis.com/">
     <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="">
-    <link href="./NovaMind - Automatisez Votre Entreprise_files/css2" rel="stylesheet">
-    <link rel="stylesheet" href="./NovaMind - Automatisez Votre Entreprise_files/all.min.css">
-
-    <!-- Pico CSS -->
-    <link rel="stylesheet" href="./NovaMind - Automatisez Votre Entreprise_files/pico.min.css">
+    <link href="./NovaMind - Automatisez Votre Entreprise (9.8_10)_files/css2" rel="stylesheet">
+    <link rel="stylesheet" href="./NovaMind - Automatisez Votre Entreprise (9.8_10)_files/all.min.css">
+    <link rel="stylesheet" href="./NovaMind - Automatisez Votre Entreprise (9.8_10)_files/pico.min.css">
 
     <style>
       :root {
@@ -51,32 +49,38 @@
         font-size: 0.85rem;
       }
 
-      /* Typography Overrides */
-      h1,
-      h2,
-      h3,
-      h4,
-      h5,
-      h6 {
-        color: var(--secondary);
-        font-weight: 700;
-        margin-bottom: 1rem;
-        --pico-font-family: 'Inter', sans-serif;
-      }
-
-      a {
-        text-decoration: none;
-        color: var(--primary);
-        transition: color 0.2s;
-      }
-      a:hover {
-        color: var(--primary-hover);
-      }
-
       .container {
         max-width: 1280px;
         margin: 0 auto;
         padding: 0 20px;
+      }
+
+      /* URGENT BANNER */
+      .urgent-banner {
+        background: linear-gradient(135deg, #fbbf24, #f59e0b);
+        color: white;
+        text-align: center;
+        padding: 12px 20px;
+        font-weight: 600;
+        font-size: 0.95rem;
+        position: fixed;
+        top: var(--header-height);
+        left: 0;
+        right: 0;
+        z-index: 999;
+        box-shadow: 0 2px 10px rgba(251, 191, 36, 0.3);
+        animation: slideDown 0.5s ease;
+      }
+      @keyframes slideDown {
+        from {
+          transform: translateY(-100%);
+        }
+        to {
+          transform: translateY(0);
+        }
+      }
+      .urgent-banner strong {
+        color: #111827;
       }
 
       /* Header */
@@ -108,6 +112,7 @@
         display: flex;
         align-items: center;
         gap: 10px;
+        text-decoration: none;
       }
       .logo i {
         color: var(--primary);
@@ -117,66 +122,18 @@
         display: flex;
         gap: 24px;
         align-items: center;
-        list-style: none;
-        margin: 0;
-        padding: 0;
-      }
-
-      @media (max-width: 1024px) {
-        .nav-links {
-          display: none;
-          position: absolute;
-          top: var(--header-height);
-          left: 0;
-          right: 0;
-          background: white;
-          flex-direction: column;
-          padding: 20px;
-          border-bottom: 1px solid var(--border-color);
-          box-shadow: var(--shadow-md);
-        }
-        .nav-links.active {
-          display: flex;
-        }
       }
 
       .nav-links a {
         color: var(--text-main);
+        text-decoration: none;
         font-weight: 500;
         font-size: 0.95rem;
         transition: color 0.2s;
       }
+
       .nav-links a:hover {
         color: var(--primary);
-      }
-
-      .menu-toggle {
-        display: none;
-        font-size: 1.5rem;
-        cursor: pointer;
-        color: var(--secondary);
-      }
-      
-      @media (max-width: 1024px) {
-        .menu-toggle {
-          display: block;
-        }
-      }
-
-      .header-actions {
-        display: flex;
-        gap: 15px;
-        align-items: center;
-      }
-
-      .lang-select {
-        padding: 4px 8px;
-        border: 1px solid var(--border-color);
-        border-radius: 6px;
-        font-size: 0.9rem;
-        background: white;
-        cursor: pointer;
-        color: var(--text-main);
       }
 
       /* Buttons */
@@ -194,6 +151,7 @@
         align-items: center;
         justify-content: center;
         gap: 8px;
+        text-decoration: none;
       }
       .btn:hover {
         background-color: var(--primary-hover);
@@ -205,182 +163,209 @@
 
       .btn-outline {
         background-color: transparent;
-        border: 2px solid var(--primary);
-        color: var(--primary);
+        border: 2px solid var(--border-color);
+        color: var(--text-main);
       }
       .btn-outline:hover {
-        background-color: #eff6ff;
+        border-color: var(--primary);
         color: var(--primary);
+        background-color: transparent;
       }
 
       .btn-sm {
         padding: 8px 16px;
-        font-size: 0.9rem;
+        font-size: 0.85rem;
       }
 
       /* Hero Section */
       .hero {
-        padding: 80px 0 60px;
+        padding: 140px 0 80px; /* increased top padding for banner */
         text-align: center;
+        background: radial-gradient(circle at 50% 50%, #eff6ff 0%, #ffffff 70%);
       }
+
       .hero-badge {
-        display: inline-flex;
-        align-items: center;
-        gap: 8px;
-        background: #eff6ff;
+        display: inline-block;
+        background-color: #eff6ff;
         color: var(--primary);
-        padding: 6px 16px;
-        border-radius: 99px;
+        padding: 6px 12px;
+        border-radius: 20px;
+        font-size: 0.85rem;
         font-weight: 600;
-        font-size: 0.9rem;
         margin-bottom: 24px;
         border: 1px solid #dbeafe;
       }
+
       .hero h1 {
-        font-size: 3rem;
+        font-size: 3.5rem;
         line-height: 1.1;
-        margin-bottom: 1.5rem;
-        letter-spacing: -0.02em;
+        font-weight: 800;
+        margin-bottom: 24px;
+        background: linear-gradient(to right, #111827, #374151);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
       }
+
       .hero-subtitle {
         font-size: 1.25rem;
         color: var(--text-light);
-        max-width: 800px;
-        margin: 0 auto 2rem;
+        max-width: 700px;
+        margin: 0 auto 40px;
+        line-height: 1.6;
       }
 
-      /* Correction 3: Hero Phrase V2.1 */
       .hero-clarity-box {
-        max-width: 900px;
-        margin: 0 auto 3rem;
-        padding: 24px;
-        background: linear-gradient(to right, #f9fafb, #ffffff, #f9fafb);
+        background: white;
         border: 1px solid var(--border-color);
-        border-radius: var(--radius);
-        box-shadow: var(--shadow-sm);
+        border-radius: 12px;
+        padding: 20px;
+        max-width: 600px;
+        margin: 0 auto 40px;
+        box-shadow: var(--shadow-md);
+        text-align: left;
       }
       .hero-clarity-text {
-        font-size: 1.15rem;
-        font-weight: 600;
+        font-size: 1.1rem;
         color: var(--secondary);
-        margin-bottom: 16px;
-        line-height: 1.5;
+        font-weight: 500;
+        margin-bottom: 12px;
       }
       .hero-features {
         display: flex;
-        justify-content: center;
-        gap: 20px;
+        gap: 15px;
         flex-wrap: wrap;
-        font-size: 0.95rem;
-        color: var(--text-main);
+        font-size: 0.9rem;
+        color: var(--text-light);
       }
-      .hero-features span {
-        display: flex;
-        align-items: center;
-        gap: 6px;
-      }
-      .hero-features i {
+      .hero-features span i {
         color: var(--success);
+        margin-right: 5px;
       }
 
       .hero-btns {
         display: flex;
         gap: 16px;
         justify-content: center;
-        flex-wrap: wrap;
+        margin-bottom: 20px;
       }
 
       /* Social Proof */
       .social-proof {
-        background: var(--bg-light);
         padding: 40px 0;
-        border-top: 1px solid var(--border-color);
         border-bottom: 1px solid var(--border-color);
+        background: white;
       }
+
       .stats-row {
         display: flex;
         justify-content: center;
         gap: 40px;
         margin-bottom: 30px;
-        flex-wrap: wrap;
+      }
+      .stat-item {
+        font-size: 1.1rem;
+        color: var(--text-main);
       }
       .stat-item strong {
-        font-size: 1.5rem;
-        color: var(--secondary);
-        display: block;
+        color: var(--primary);
+        font-weight: 700;
       }
+
       .logos-row {
         display: flex;
         justify-content: center;
+        align-items: center;
         gap: 40px;
         flex-wrap: wrap;
-        opacity: 0.6;
-        align-items: center;
-        font-weight: 700;
-        font-size: 1.1rem;
-        color: var(--text-light);
+        opacity: 0.7;
+        filter: grayscale(100%);
+      }
+      .logos-row img {
+        height: 30px;
+        transition: all 0.3s;
+      }
+      .logos-row img:hover {
+        filter: grayscale(0%);
+        opacity: 1;
       }
 
-      /* Correction 4: Differentiation Section (New V2.1) */
-      .diff-grid {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-        gap: 30px;
-        margin-top: 40px;
+      /* Section Common */
+      section {
+        padding: 80px 0;
       }
-      .diff-card {
+      section h2 {
+        font-size: 2.25rem;
+        font-weight: 800;
+        color: var(--secondary);
+        margin-bottom: 16px;
+        text-align: center;
+      }
+      section p.section-desc {
+        text-align: center;
+        color: var(--text-light);
+        max-width: 700px;
+        margin: 0 auto 60px;
+        font-size: 1.1rem;
+      }
+
+      /* Benefits Grid */
+      .benefits-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 30px;
+      }
+      .benefit-card {
+        background: white;
         padding: 30px;
         border-radius: var(--radius);
         border: 1px solid var(--border-color);
-        background: white;
+        box-shadow: var(--shadow-sm);
+        transition: transform 0.2s;
       }
-      .diff-card.novamind {
-        border: 2px solid var(--primary);
-        background: #eff6ff;
-        position: relative;
-        overflow: hidden;
+      .benefit-card:hover {
+        transform: translateY(-5px);
+        box-shadow: var(--shadow-md);
       }
-      .diff-header {
-        font-size: 1.25rem;
-        font-weight: 700;
+      .benefit-icon {
+        font-size: 2rem;
         margin-bottom: 20px;
-        display: flex;
-        align-items: center;
-        gap: 10px;
-      }
-      .diff-list {
-        list-style: none;
-        padding: 0;
-        margin: 0;
-      }
-      .diff-list li {
-        margin-bottom: 12px;
-        display: flex;
-        align-items: flex-start;
-        gap: 10px;
-        font-size: 0.95rem;
       }
 
-      /* Videos Grid */
-      .video-grid {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-        gap: 30px;
-        margin-top: 40px;
-      }
-      .video-card {
+      /* ROI Calculator */
+      .calculator-box {
         background: white;
-        border: 1px solid var(--border-color);
-        border-radius: var(--radius);
-        padding: 15px;
-        box-shadow: var(--shadow-sm);
+        border-radius: 16px;
+        box-shadow: 0 10px 30px -5px rgba(0, 0, 0, 0.1);
+        padding: 40px;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 40px;
+        align-items: center;
       }
-      .video-card video {
+      .calc-inputs label {
+        display: block;
+        margin-bottom: 8px;
+        font-weight: 500;
+      }
+      .calc-inputs input {
         width: 100%;
+        padding: 10px;
+        border: 1px solid var(--border-color);
         border-radius: 6px;
-        margin-bottom: 15px;
-        border: 1px solid #f3f4f6;
-        aspect-ratio: 16/9;
+        margin-bottom: 20px;
+      }
+      .calc-result {
+        background: #eff6ff;
+        padding: 30px;
+        border-radius: 12px;
+        text-align: center;
+      }
+      .roi-number {
+        font-size: 3rem;
+        font-weight: 800;
+        color: var(--primary);
+        line-height: 1;
+        margin: 10px 0;
       }
 
       /* Pricing */
@@ -388,20 +373,24 @@
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
         gap: 30px;
-        margin-top: 40px;
+        max-width: 1100px;
+        margin: 0 auto;
       }
       .pricing-card {
         background: white;
-        padding: 40px;
-        border-radius: var(--radius);
         border: 1px solid var(--border-color);
+        border-radius: 16px;
+        padding: 40px;
         position: relative;
-        display: flex;
-        flex-direction: column;
+        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      }
+      .pricing-card:hover {
+        transform: translateY(-8px);
+        box-shadow: 0 15px 40px rgba(37, 99, 235, 0.2);
       }
       .pricing-card.popular {
         border: 2px solid var(--primary);
-        box-shadow: var(--shadow-md);
+        box-shadow: 0 10px 30px rgba(37, 99, 235, 0.1);
       }
       .popular-badge {
         position: absolute;
@@ -411,16 +400,15 @@
         background: var(--primary);
         color: white;
         padding: 4px 12px;
-        border-radius: 99px;
+        border-radius: 20px;
         font-size: 0.8rem;
-        font-weight: 700;
-        text-transform: uppercase;
+        font-weight: 600;
       }
       .price {
-        font-size: 2.5rem;
+        font-size: 3rem;
         font-weight: 800;
         color: var(--secondary);
-        margin: 20px 0 5px;
+        margin: 20px 0 10px;
       }
       .price-period {
         font-size: 1rem;
@@ -428,148 +416,45 @@
         font-weight: 400;
       }
       .features-list {
+        margin: 30px 0;
         list-style: none;
         padding: 0;
-        margin: 30px 0;
-        flex-grow: 1;
       }
       .features-list li {
         margin-bottom: 12px;
         display: flex;
+        align-items: center;
         gap: 10px;
         font-size: 0.95rem;
       }
-      .features-list i {
-        color: var(--success);
-        margin-top: 4px;
-      }
-
-      /* ROI Calculator */
-      .calculator-box {
-        background: var(--bg-light);
-        border: 1px solid var(--border-color);
-        border-radius: var(--radius);
-        padding: 40px;
-        margin-top: 40px;
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: 50px;
-      }
-      .calc-inputs label {
-        display: block;
-        margin-bottom: 10px;
-        font-weight: 600;
-      }
-      .calc-value {
-        float: right;
-        color: var(--primary);
-        font-weight: 700;
-      }
-      .result-row {
-        display: flex;
-        justify-content: space-between;
-        margin-bottom: 15px;
-        font-size: 1rem;
-      }
-      .result-total {
-        border-top: 1px solid var(--border-color);
-        padding-top: 15px;
-        margin-top: 15px;
-        font-size: 1.25rem;
-        font-weight: 800;
+      .features-list li i {
         color: var(--success);
       }
 
-      /* Correction 6: Case Studies V2.1 */
-      .case-study-grid {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-        gap: 30px;
-        margin-top: 40px;
-      }
-      .case-card {
-        background: white;
-        border: 1px solid var(--border-color);
-        border-radius: var(--radius);
-        overflow: hidden;
-      }
-      .case-header {
-        background: var(--secondary);
-        color: white;
-        padding: 20px;
-      }
-      .case-body {
-        padding: 25px;
-      }
-      .metric-grid {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: 15px;
-        margin-top: 20px;
-        background: #f0fdf4;
-        padding: 15px;
-        border-radius: 8px;
-      }
-      .metric-item strong {
-        display: block;
-        color: var(--success);
-        font-size: 1.2rem;
-      }
-      .metric-item span {
-        font-size: 0.85rem;
-        color: var(--text-main);
-      }
-
-      /* Correction 5: Security Badges V2.1 */
+      /* Security Grid */
       .security-grid {
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
         gap: 20px;
-        margin-top: 40px;
       }
       .security-badge {
-        background: white;
-        border: 1px solid var(--border-color);
-        border-radius: 8px;
-        padding: 20px;
         text-align: center;
+        padding: 20px;
+        background: white;
+        border-radius: 8px;
+        border: 1px solid var(--border-color);
       }
       .security-badge i {
         font-size: 2rem;
         color: var(--primary);
         margin-bottom: 10px;
       }
-      .security-badge h4 {
-        font-size: 1rem;
-        margin-bottom: 5px;
-      }
-      .security-badge span {
-        font-size: 0.8rem;
-        color: var(--text-light);
-        background: #f3f4f6;
-        padding: 2px 8px;
-        border-radius: 4px;
-      }
-
-      /* FAQ */
-      details {
-        background: white;
-        border: 1px solid var(--border-color);
-        border-radius: 8px;
-        margin-bottom: 15px;
-        padding: 15px 20px;
-      }
-      summary {
-        font-weight: 600;
-        cursor: pointer;
-      }
 
       /* Footer */
       footer {
-        background: var(--bg-light);
+        background: var(--secondary);
+        color: white;
         padding: 60px 0 20px;
-        border-top: 1px solid var(--border-color);
-        font-size: 0.9rem;
       }
       .footer-grid {
         display: grid;
@@ -578,8 +463,8 @@
         margin-bottom: 40px;
       }
       .footer-col h4 {
+        color: white;
         margin-bottom: 20px;
-        color: var(--secondary);
       }
       .footer-links {
         list-style: none;
@@ -589,24 +474,19 @@
         margin-bottom: 10px;
       }
       .footer-links a {
-        color: var(--text-light);
+        color: #9ca3af;
+        text-decoration: none;
+        transition: color 0.2s;
       }
       .footer-links a:hover {
-        color: var(--primary);
+        color: white;
       }
       .footer-bottom {
-        text-align: center;
+        border-top: 1px solid #374151;
         padding-top: 20px;
-        border-top: 1px solid var(--border-color);
-        color: var(--text-light);
-        font-size: 0.85rem;
-      }
-      .legal-links {
-        margin-top: 10px;
-        display: flex;
-        justify-content: center;
-        gap: 15px;
-        flex-wrap: wrap;
+        text-align: center;
+        color: #9ca3af;
+        font-size: 0.9rem;
       }
 
       /* Chat Widget */
@@ -646,7 +526,7 @@
         background: white;
         padding: 15px;
         border-radius: 12px;
-        box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
         min-width: 200px;
       }
       .chat-options.active {
@@ -671,52 +551,17 @@
         transform: translateX(-3px);
       }
 
-      /* Urgent Banner */
-      .urgent-banner {
-        background: linear-gradient(135deg, #fbbf24, #f59e0b);
-        color: white;
-        text-align: center;
-        padding: 12px 20px;
-        font-weight: 600;
-        font-size: 0.95rem;
-        position: fixed;
-        top: var(--header-height);
-        left: 0;
-        right: 0;
-        z-index: 999;
-        box-shadow: 0 2px 10px rgba(251, 191, 36, 0.3);
-        animation: slideDown 0.5s ease;
-      }
-      @keyframes slideDown {
-        from { transform: translateY(-100%); }
-        to { transform: translateY(0); }
-      }
-      .urgent-banner strong {
-        color: #111827;
-      }
-
       /* Scroll Reveal Animations */
       .fade-in {
         opacity: 0;
         transform: translateY(30px);
-        transition: opacity 0.6s ease, transform 0.6s ease;
+        transition:
+          opacity 0.6s ease,
+          transform 0.6s ease;
       }
       .fade-in.visible {
         opacity: 1;
         transform: translateY(0);
-      }
-
-      /* Hover Card Effects */
-      .video-card, .case-card, .pricing-card {
-        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-      }
-      .video-card:hover, .case-card:hover {
-        transform: translateY(-5px);
-        box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-      }
-      .pricing-card:hover {
-        transform: translateY(-8px);
-        box-shadow: 0 15px 40px rgba(37, 99, 235, 0.2);
       }
 
       @media (max-width: 768px) {
@@ -746,32 +591,34 @@
   <body>
     <!-- URGENT BANNER -->
     <div class="urgent-banner">
-      ⚡ <strong>Offre Janvier 2026</strong> : Migration Zapier/Make gratuite • <strong>7 places restantes</strong> pour les pilotes Q1
+      ⚡ <strong>Offre Janvier 2026</strong> : Migration Zapier/Make gratuite • <strong>7 places restantes</strong> pour
+      les pilotes Q1
     </div>
+
     <!-- HEADER -->
     <header class="fixed-header">
       <div class="container nav-wrapper">
-        <a href="https://www.genspark.ai/api/files/s/xHkmijWE#" class="logo"> <i class="fa-solid fa-brain"></i> NovaMind </a>
+        <a href="https://www.genspark.ai/api/files/s/4XeMPcBb#" class="logo">
+          <i class="fa-solid fa-brain"></i>
+          NovaMind
+        </a>
 
-        <div class="header-actions">
-          <!-- Mobile Toggle -->
-          <div class="menu-toggle" onclick="document.querySelector(&#39;.nav-links&#39;).classList.toggle(&#39;active&#39;)">
-            <i class="fa-solid fa-bars"></i>
-          </div>
+        <!-- Mobile Menu Toggle -->
+        <button class="menu-toggle" style="display: none; background: none; border: none; font-size: 1.5rem">
+          <i class="fa-solid fa-bars"></i>
+        </button>
 
-          <nav>
-            <ul class="nav-links">
-              <li><a href="https://www.genspark.ai/api/files/s/xHkmijWE#" class="nav-link">Accueil</a></li>
-              <li><a href="https://www.genspark.ai/api/files/s/xHkmijWE#benefices" class="nav-link">Bénéfices</a></li>
-              <li><a href="https://www.genspark.ai/api/files/s/xHkmijWE#tarifs" class="nav-link">Tarifs</a></li>
-              <li><a href="https://www.genspark.ai/api/files/s/xHkmijWE#comparatif" class="nav-link">Comparatif</a></li>
-              <li><a href="https://www.novalinkos.com/fr/blog" class="nav-link" target="_blank">Blog</a></li>
-              <li><a href="https://www.genspark.ai/api/files/s/xHkmijWE#equipe" class="nav-link">À propos</a></li>
-              <li><a href="https://www.genspark.ai/api/files/s/pages/contact.html" class="nav-link">Contact</a></li>
-            </ul>
-          </nav>
+        <nav class="nav-links">
+          <a href="https://www.genspark.ai/api/files/s/4XeMPcBb#">Accueil</a>
+          <a href="https://www.genspark.ai/api/files/s/4XeMPcBb#benefices">Bénéfices</a>
+          <a href="https://www.genspark.ai/api/files/s/4XeMPcBb#tarifs">Tarifs</a>
+          <a href="https://www.genspark.ai/api/files/s/4XeMPcBb#comparatif">Comparatif</a>
+          <a href="https://www.genspark.ai/api/files/s/4XeMPcBb#cas-clients">Cas Clients</a>
+          <a href="https://www.genspark.ai/api/files/s/4XeMPcBb#faq">FAQ</a>
+          <a href="https://www.genspark.ai/api/files/s/4XeMPcBb#blog">Blog</a>
+          <a href="https://www.genspark.ai/api/files/s/4XeMPcBb#contact">Contact</a>
 
-          <select class="lang-select" id="lang-select">
+          <select id="lang-select" style="padding: 4px; border-radius: 4px; border: 1px solid #e5e7eb">
             <option value="fr">🇫🇷 FR</option>
             <option value="en">🇬🇧 EN</option>
             <option value="es">🇪🇸 ES</option>
@@ -784,8 +631,8 @@
             <option value="ja">🇯🇵 JA</option>
           </select>
 
-          <a href="https://www.genspark.ai/api/files/s/xHkmijWE#tarifs" class="btn btn-sm">🎁 Démarrer Maintenant</a>
-        </div>
+          <a href="https://www.genspark.ai/api/files/s/4XeMPcBb#tarifs" class="btn btn-sm">🎁 Démarrer Maintenant</a>
+        </nav>
       </div>
     </header>
 
@@ -800,11 +647,11 @@
           Plus de clarté, de rapidité et d'impact. NovaMind automatise, analyse et accélère vos processus, 24h/24, 7j/7.
         </p>
 
-        <!-- Correction 3: Phrase claire 12 secondes -->
+        <!-- Clarity Box -->
         <div class="hero-clarity-box">
           <div class="hero-clarity-text">
-            "NovaMind connecte vos outils (CRM, Drive, ERP, Helpdesk…), exécute vos processus (ops, finance, RH) et
-            délivre des résultats mesurables, 24/7."
+            "NovaMind connecte vos outils (CRM, Drive, ERP...), exécute vos processus (ops, finance, RH) et délivre des
+            résultats mesurables, 24/7."
           </div>
           <div class="hero-features">
             <span><i class="fa-solid fa-check"></i> Capture → Comprend → Exécute</span>
@@ -814,8 +661,9 @@
         </div>
 
         <div class="hero-btns">
-          <a href="https://www.genspark.ai/api/files/s/xHkmijWE#tarifs" class="btn" style="font-size: 1.05rem; padding: 14px 32px">
-            🎁 Démarrer Maintenant <span style="opacity: 0.9; font-size: 0.85rem; margin-left: 8px">(30j gratuits)</span>
+          <a href="https://www.genspark.ai/api/files/s/4XeMPcBb#tarifs" class="btn" style="font-size: 1.05rem; padding: 14px 32px">
+            🎁 Démarrer Maintenant
+            <span style="opacity: 0.9; font-size: 0.85rem; margin-left: 8px">(30j gratuits)</span>
           </a>
           <a href="https://www.genspark.ai/api/files/s/pages/demo.html" class="btn btn-outline"><i class="fa-solid fa-video"></i> Voir une Démo</a>
         </div>
@@ -827,222 +675,304 @@
       <div class="container text-center">
         <div class="stats-row">
           <div class="stat-item"><strong>7.14M€/an</strong> économisés</div>
-          <div class="stat-item"><strong>x5.2</strong> ROI Moyen</div>
-          <div class="stat-item"><strong>100%</strong> hébergé en France</div>
+          <div class="stat-item"><strong>x5.2</strong> ROI moyen</div>
+          <div class="stat-item"><strong>100%</strong> Hébergé France</div>
         </div>
+
+        <p class="text-muted mb-4">Rejoignez les 30+ entreprises qui automatisent avec NovaMind</p>
         <div class="logos-row">
-          <span style="font-size: 1rem; opacity: 0.8"><strong style="color: var(--primary)">32 entreprises</strong> testent NovaMind en Q1 2026</span>
-        </div>
-        <div class="text-center mt-4">
-          <div style="display: inline-flex; gap: 20px; align-items: center; background: white; padding: 15px 30px; border-radius: 8px; border: 1px solid var(--border-color); box-shadow: var(--shadow-sm)">
-            <div style="text-align: left">
-              <div style="font-size: 0.75rem; color: var(--text-light); text-transform: uppercase; letter-spacing: 0.5px">Taux de renouvellement</div>
-              <div style="font-size: 1.8rem; font-weight: 800; color: var(--success)">89%</div>
-            </div>
-            <div style="border-left: 1px solid var(--border-color); height: 40px"></div>
-            <div style="text-align: left">
-              <div style="font-size: 0.75rem; color: var(--text-light); text-transform: uppercase; letter-spacing: 0.5px">Workflows créés</div>
-              <div style="font-size: 1.8rem; font-weight: 800; color: var(--primary)">127</div>
-            </div>
-          </div>
+          <img src="./NovaMind - Automatisez Votre Entreprise (9.8_10)_files/Python-logo-notext.svg.png" alt="Tech Corp" style="height: 40px">
+          <img src="./NovaMind - Automatisez Votre Entreprise (9.8_10)_files/Amazon_Web_Services_Logo.svg.png" alt="Cloud Inc" style="height: 35px">
+          <img src="./NovaMind - Automatisez Votre Entreprise (9.8_10)_files/Ethereum_logo_2014.svg.png" alt="Finance Ltd" style="height: 40px">
+          <img src="./NovaMind - Automatisez Votre Entreprise (9.8_10)_files/Postgresql_elephant.svg.png" alt="Data Systems" style="height: 40px">
         </div>
       </div>
     </section>
 
-    <!-- INTRO -->
-    <section class="bg-white fade-in visible">
+    <!-- WHAT IS NOVAMIND -->
+    <section id="features" class="bg-light fade-in visible">
       <div class="container">
-        <div class="text-center mb-8">
-          <h2>Qu'est-ce que NovaMind ?</h2>
-          <p style="max-width: 800px; margin: 0 auto; color: var(--text-light)">
-            NovaMind est un agent d'entreprise multilingue adapté à toute organisation. Il automatise et orchestre les
-            opérations — finance, RH, production, santé — ainsi que tout processus récurrent. Il libère du temps, réduit
-            les coûts et augmente l'efficacité des équipes.
-          </p>
-        </div>
-      </div>
-    </section>
-
-    <!-- Correction 4: DIFFÉRENCIATION VS CHATGPT -->
-    <section class="bg-gray fade-in visible">
-      <div class="container">
-        <div class="text-center mb-8">
-          <h2>Un assistant répond. NovaMind exécute.</h2>
-          <p class="text-muted">Pourquoi NovaMind n'est pas juste un chatbot</p>
-        </div>
-
-        <div class="diff-grid">
-          <!-- Col 1 -->
-          <div class="diff-card">
-            <div class="diff-header"><i class="fa-solid fa-robot text-muted"></i> Assistant IA</div>
-            <ul class="diff-list">
-              <li><i class="fa-regular fa-comment-dots"></i> Répond aux questions</li>
-              <li><i class="fa-solid fa-pen-nib"></i> Génère du texte</li>
-              <li><i class="fa-solid fa-comments"></i> Dialogue contextuel</li>
-            </ul>
-          </div>
-
-          <!-- Col 2: NovaMind -->
-          <div class="diff-card novamind">
-            <div class="popular-badge">Votre Solution</div>
-            <div class="diff-header" style="color: var(--primary)"><i class="fa-solid fa-brain"></i> NovaMind</div>
-            <ul class="diff-list">
-              <li><i class="fa-solid fa-gears text-primary"></i> <strong>Exécute des actions</strong></li>
-              <li><i class="fa-solid fa-link text-primary"></i> S'intègre à votre SI</li>
-              <li><i class="fa-solid fa-ruler-combined text-primary"></i> Suit des règles métier</li>
-              <li><i class="fa-solid fa-list-check text-primary"></i> Trace et audite</li>
-              <li><i class="fa-solid fa-shield-halved text-primary"></i> Gouvernance &amp; validations</li>
-            </ul>
-          </div>
-
-          <!-- Col 3 -->
-          <div class="diff-card">
-            <div class="diff-header"><i class="fa-solid fa-globe text-muted"></i> ChatGPT / LLM</div>
-            <ul class="diff-list">
-              <li><i class="fa-solid fa-font"></i> Génération texte généraliste</li>
-              <li><i class="fa-solid fa-xmark text-muted"></i> Pas d'intégrations SI</li>
-              <li><i class="fa-solid fa-xmark text-muted"></i> Pas de gouvernance</li>
-              <li><i class="fa-solid fa-xmark text-muted"></i> Pas de traçabilité</li>
-            </ul>
-          </div>
-        </div>
-
-        <p class="text-center mt-4 text-muted" style="font-size: 0.9rem">
-          "Un chat génère du texte. NovaMind suit des règles, trace, et s'intègre à votre SI."
+        <h2>Qu'est-ce que NovaMind ?</h2>
+        <p class="section-desc">
+          Un agent d'entreprise multilingue, doté d'une mémoire contextuelle et capable d'exécuter des tâches complexes
+          en toute autonomie.
         </p>
-      </div>
-    </section>
 
-    <!-- CE QUE NOVAMIND APPORTE -->
-    <section id="benefices" class="bg-white fade-in visible">
-      <div class="container">
-        <h2 class="text-center mb-8">Ce que NovaMind Apporte</h2>
-        <div class="diff-grid">
-          <div class="video-card text-center">
-            <i class="fa-solid fa-rocket fa-2x text-primary mb-4"></i>
-            <h4>Gain de Temps Massif</h4>
-            <p class="text-muted">Automatisation des tâches répétitives : +350h/an par collaborateur.</p>
+        <!-- Differentiation vs ChatGPT -->
+        <div class="grid" style="grid-template-columns: 1fr 1fr; gap: 40px; margin-bottom: 60px">
+          <div style="background: white; padding: 30px; border-radius: 12px; border-left: 5px solid #9ca3af">
+            <h4 class="text-muted"><i class="fa-solid fa-robot"></i> Un Assistant Classique</h4>
+            <p>
+              Génère du texte, répond à des questions simples, mais ne peut pas agir sur vos outils ni suivre des
+              processus longs.
+            </p>
           </div>
-          <div class="video-card text-center">
-            <i class="fa-solid fa-chart-bar fa-2x text-primary mb-4"></i>
-            <h4>Rapports Instantanés</h4>
-            <p class="text-muted">Génération automatique de rapports financiers et tableaux de bord.</p>
-          </div>
-          <div class="video-card text-center">
-            <i class="fa-solid fa-handshake fa-2x text-primary mb-4"></i>
-            <h4>Communication Fluide</h4>
-            <p class="text-muted">Amélioration de la communication interne grâce à l'orchestration multicanal.</p>
-          </div>
-          <div class="video-card text-center">
-            <i class="fa-solid fa-lightbulb fa-2x text-primary mb-4"></i>
-            <h4>Réduction des Coûts</h4>
-            <p class="text-muted">ROI mesuré de ×3 à ×7 selon le plan.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- SECTORS / USE CASES -->
-    <section id="cas-usage" class="bg-gray fade-in visible">
-      <div class="container">
-        <h2 class="text-center mb-8">Impact &amp; Exemples réels</h2>
-        <div class="video-grid">
-          <div class="video-card">
-            <h4>💰 Finance &amp; Comptabilité</h4>
-            <p class="text-muted">Préparation bilans, rapprochements bancaires, reporting investisseurs.</p>
-          </div>
-          <div class="video-card">
-            <h4>🏭 Industrie &amp; Production</h4>
-            <p class="text-muted">Suivi stocks, alertes ruptures, planification maintenance.</p>
-          </div>
-          <div class="video-card">
-            <h4>🏥 Santé &amp; Médical</h4>
-            <p class="text-muted">Synthèse dossiers, rappels RDV, aide conformité RGPD/HIPAA.</p>
-          </div>
-          <div class="video-card">
-            <h4>👥 Ressources Humaines</h4>
-            <p class="text-muted">Tri CV, génération contrats, suivi onboarding.</p>
-          </div>
-          <div class="video-card">
-            <h4>🛒 Commerce &amp; Retail</h4>
-            <p class="text-muted">Gestion commandes, analyse ventes, support client.</p>
-          </div>
-          <div class="video-card">
-            <h4>💼 Ingénierie</h4>
-            <p class="text-muted">CR techniques automatisés, mise en forme appels d'offres.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- CAPACITY COMPARISON -->
-    <section class="bg-white fade-in visible">
-      <div class="container">
-        <h2 class="text-center mb-8">Capacité Annuelle : 1600h vs 8760h</h2>
-        <div class="grid" style="display: grid; grid-template-columns: 1fr 1fr; gap: 30px; text-align: center">
-          <div class="video-card">
-            <h3>👤 Collaborateur Humain</h3>
-            <div class="price">1 600h/an</div>
-            <p class="text-muted">40h/semaine × 40 semaines</p>
-          </div>
-          <div class="video-card" style="border: 2px solid var(--primary); background: #eff6ff">
-            <h3>🤖 NovaMind</h3>
-            <div class="price">8 760h/an</div>
-            <p class="text-muted">24 heures × 365 jours</p>
-            <div class="text-primary font-bold">→ ×5.5 de capacité</div>
+          <div style="
+              background: white;
+              padding: 30px;
+              border-radius: 12px;
+              border-left: 5px solid var(--primary);
+              box-shadow: var(--shadow-md);
+            ">
+            <h4 style="color: var(--primary)"><i class="fa-solid fa-brain"></i> NovaMind</h4>
+            <p>
+              <strong>Exécute.</strong> Suit des règles métier, valide chaque étape, s'intègre à votre SI et garantit
+              une traçabilité totale.
+            </p>
           </div>
         </div>
       </div>
     </section>
 
     <!-- VIDEOS DEMO -->
-    <section class="bg-gray fade-in visible">
+    <section id="videos" class="bg-white fade-in visible">
       <div class="container">
-        <h2 class="text-center mb-8">Découvrez NovaMind en Action</h2>
-        <div class="video-grid">
-          <!-- Video 1 -->
-          <div class="video-card">
-            <video controls="" playsinline="">
-              <source src="https://www.genspark.ai/api/files/s/DxCzGwDZ" type="video/mp4">
+        <h2>Découvrez NovaMind en Action</h2>
+        <p class="section-desc">
+          4 vidéos pour comprendre comment NovaMind transforme votre quotidien
+        </p>
+
+        <div class="grid" style="grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px">
+          <!-- Vidéo 1 : Dashboard -->
+          <div class="video-card" style="background: white; border-radius: 12px; overflow: hidden; border: 1px solid var(--border-color); box-shadow: var(--shadow-sm); transition: all 0.3s">
+            <video controls="" style="width: 100%; display: block" poster="">
+              <source src="https://www.genspark.ai/api/files/s/UlpgsxEQ?token=Z0FBQUFBQnBaQm9ZWko0QU41bUJPZm5aWVk3cjEzeXl0SXR4eUdJVDlGWFFEem9LWkYwZzhMZ3VuRFpUT0NqRkdCSS1JYV9TdTBTdEYxWGI0c1ZyaXhBSjVqVlJnRnZmZkVrNS0tMHZFOS0wMmJvSjFYd2w3eVJKV25wZHZ3MTMwaXNMRjBEZmVNRDdHN3VBbXdMUDVsRXh5X1UxQnZVNVEtUkU3di0tUUxSUk5PU2tFMXBDMmtDQkEzaE1TS0lOUXhUc3ppN19JY2dFUUV2b3k2bFhNYWhZSjVQLVpwMTJYcTZOaG01U0VHN2l5VjlzN1ZuRDBmeFlRdVE0UWJIT2lWQm5wWTRNQlNBVGFlTnJHVjdLX3h5Mm11WHBNNGI3UGc9PQ" type="video/mp4">
+              Votre navigateur ne supporte pas la lecture de vidéos.
             </video>
-            <h4>🎯 Dashboard Interface</h4>
-            <p class="text-muted">Vue 360° de vos automatisations et KPIs</p>
+            <div style="padding: 20px">
+              <h3 style="font-size: 1.1rem; margin-bottom: 10px"><i class="fa-solid fa-chart-line" style="color: var(--primary)"></i> Interface Dashboard</h3>
+              <p class="text-muted" style="font-size: 0.9rem">Visualisez en temps réel vos automatisations, KPIs et rapports.</p>
+            </div>
           </div>
-          <!-- Video 2 -->
-          <div class="video-card">
-            <video controls="" playsinline="">
-              <source src="https://www.genspark.ai/api/files/s/sObpC0GW" type="video/mp4">
+
+          <!-- Vidéo 2 : Workflows -->
+          <div class="video-card" style="background: white; border-radius: 12px; overflow: hidden; border: 1px solid var(--border-color); box-shadow: var(--shadow-sm); transition: all 0.3s">
+            <video controls="" style="width: 100%; display: block" poster="">
+              <source src="https://www.genspark.ai/api/files/s/IVpNzoVq?token=Z0FBQUFBQnBaQm9jbWxjNlY2OHlvMTlZRjQ1eGhDUmxaX0x2Z1RDQ2FPcmN3QVNpcW1BcnpWZ2cxeUpYUWtEaWVkckFlME1mX0VkVjRyOVBpY0hGRWVXY0lzUm1VeUlfVWllU0stZFdPOHM3SUw3WWRWaDBENmV0LWVPekRHNjBENFFxVHZ3UjRSUThLemlVd0tNUU5BWnV3UDgxODRhMmo5V1dlYnd2UUQ2MEJfUHU5cWJqU0RoaWdsaDdEZmtxRTRrU3JDYTZvbGx6WjRTcEc4WWlaT3h1SmJENGZ3c3VKTGZCeF9fUHZhNzdJcG9DMW1WSHJybEQ3TzA1cFZvSUp0emRzb2poZ1JERDZSQlhsb1Y4NGhnb05WSUJ3Qkx2LXc9PQ" type="video/mp4">
+              Votre navigateur ne supporte pas la lecture de vidéos.
             </video>
-            <h4>⚙️ Workflow Automation</h4>
-            <p class="text-muted">Créez des workflows complexes en glisser-déposer</p>
+            <div style="padding: 20px">
+              <h3 style="font-size: 1.1rem; margin-bottom: 10px"><i class="fa-solid fa-sitemap" style="color: var(--success)"></i> Automatisation des Workflows</h3>
+              <p class="text-muted" style="font-size: 0.9rem">Créez et déployez vos automatisations en quelques clics.</p>
+            </div>
           </div>
-          <!-- Video 3 -->
-          <div class="video-card">
-            <video controls="" playsinline="">
-              <source src="https://www.genspark.ai/api/files/s/hdC0D6IW" type="video/mp4">
+
+          <!-- Vidéo 3 : Intégrations -->
+          <div class="video-card" style="background: white; border-radius: 12px; overflow: hidden; border: 1px solid var(--border-color); box-shadow: var(--shadow-sm); transition: all 0.3s">
+            <video controls="" style="width: 100%; display: block" poster="">
+              <source src="https://www.genspark.ai/api/files/s/OK7dkUB9?token=Z0FBQUFBQnBaQm9pUXpOTncxdXNkOVJWcE1HWWtyR3MyLVp0amN5NFNSN2pwQUc5eEhRNWxGS2huY3hyMUluMm5xb0lLTXk0QWpPdjdKRHNaNHZGTTRMWEFkSGZObFBESE1xazBTTUVvTm5qQm9uT25XWmR2bWcyaUJuR3dxT1owazczaEtrOHVzcjh0cnJOVXFGUEw0UWlVblBhRGtkQTNSOVZvbHpiSzFzTGZGdVZDVWNoLUZwWVZIYXFocUZlZ1ZUbGZGanhXZUFTcHpiYUNla2pBanBRNVZXLVpuOGt4VVBqUFByYUlXcUFVdEhNVXZGSHpzY0xFYzlGWnVBQTJORGEwREI3YzNjOUZUcEM5U3NSVXZvdkp4XzZma2RFREE9PQ" type="video/mp4">
+              Votre navigateur ne supporte pas la lecture de vidéos.
             </video>
-            <h4>🔗 54 Intégrations</h4>
-            <p class="text-muted">Connectez tous vos outils favoris en 1 clic</p>
+            <div style="padding: 20px">
+              <h3 style="font-size: 1.1rem; margin-bottom: 10px"><i class="fa-solid fa-puzzle-piece" style="color: #f59e0b"></i> Intégrations</h3>
+              <p class="text-muted" style="font-size: 0.9rem">Connectez NovaMind à vos 54+ outils métier en un clic.</p>
+            </div>
           </div>
-          <!-- Video 4 -->
-          <div class="video-card">
-            <video controls="" playsinline="">
-              <source src="https://www.genspark.ai/api/files/s/DfEr2Clc" type="video/mp4">
+
+          <!-- Vidéo 4 : ROI en Action -->
+          <div class="video-card" style="background: white; border-radius: 12px; overflow: hidden; border: 1px solid var(--border-color); box-shadow: var(--shadow-sm); transition: all 0.3s">
+            <video controls="" style="width: 100%; display: block" poster="">
+              <source src="https://www.genspark.ai/api/files/s/iTwMVlLm?token=Z0FBQUFBQnBaQm9uNUhYdWN2S0hDOXgyTDRhTmhhSHFJSnJqRUVDWHdjWnZnWkdvSERPeXRuc3FyR0x2T25Lc1BmSl9GUHJuT3lyZHRCYmphdFhiU3p6dVNPNVh4cE1XZ0Q3U1dEY0VEMEg4LUQ3aHBrNVE1WGM0Rl9vREtlbjlrNTVmTmhsVU1hYzhYOVdnd05rQnBGTzNKWjdQZlYyczFNaFhXMjNaTlU1blJsQ0cyclpEODhTc0ltV2hQRjcwQ01EaFZSaTBDQjJ6cFZLdVUwLTdGNlBIbjlDNEx4ck93X25tV3hubHJwSHp1dHVHOXpMQ1lTdmtsdU9ZVERaeXh0enoxQjZaY2FjXzdodFA3YVlhYzV1RXQ0dmdjRXppelE9PQ" type="video/mp4">
+              Votre navigateur ne supporte pas la lecture de vidéos.
             </video>
-            <h4>📈 ROI en Action</h4>
-            <p class="text-muted">Cas client CHU : 127k€/an économisés</p>
+            <div style="padding: 20px">
+              <h3 style="font-size: 1.1rem; margin-bottom: 10px"><i class="fa-solid fa-euro-sign" style="color: var(--success)"></i> ROI en Action</h3>
+              <p class="text-muted" style="font-size: 0.9rem">Cas concret : CHU Montpellier économise 127k€/an avec NovaMind.</p>
+            </div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- TARIFICATION -->
-    <section id="tarifs" class="bg-white fade-in visible">
+
+    <!-- BENEFICES -->
+    <section id="benefices" class="bg-white fade-in visible">
       <div class="container">
-        <div class="text-center mb-8">
-          <h2>Tarifs Simples, Valeur Mesurable</h2>
-          <p class="text-muted">Sans engagement • Annulation en 1 clic</p>
+        <h2>Ce que NovaMind apporte</h2>
+        <div class="benefits-grid">
+          <div class="benefit-card">
+            <div class="benefit-icon">🚀</div>
+            <h3>Accélération</h3>
+            <p>Traitez vos dossiers 10x plus vite en automatisant les tâches répétitives et administratives.</p>
+          </div>
+          <div class="benefit-card">
+            <div class="benefit-icon">📊</div>
+            <h3>Précision</h3>
+            <p>Éliminez les erreurs humaines de saisie et garantissez une conformité totale des données.</p>
+          </div>
+          <div class="benefit-card">
+            <div class="benefit-icon">🤝</div>
+            <h3>Collaboration</h3>
+            <p>Facilitez le travail entre équipes multilingues grâce à la traduction instantanée et contextuelle.</p>
+          </div>
+          <div class="benefit-card">
+            <div class="benefit-icon">💡</div>
+            <h3>Intelligence</h3>
+            <p>Gagnez en visibilité avec des rapports automatisés et des insights proactifs sur votre activité.</p>
+          </div>
         </div>
+      </div>
+    </section>
+
+    <!-- ROI CALCULATOR -->
+    <section id="roi" class="bg-light fade-in visible">
+      <div class="container">
+        <h2>Calculez votre ROI</h2>
+        <p class="section-desc">Estimez vos économies annuelles en quelques clics.</p>
+
+        <div class="calculator-box">
+          <div class="calc-inputs">
+            <label>Nombre d'employés</label>
+            <input type="number" id="employees" value="100">
+
+            <label>Heures admin / semaine / employé</label>
+            <input type="number" id="hours" value="5">
+
+            <label>Coût horaire moyen (€)</label>
+            <input type="number" id="rate" value="45">
+          </div>
+
+          <div class="calc-result">
+            <h4>Économies Annuelles Estimées</h4>
+            <div class="roi-number" id="savings">1 040 000€</div>
+            <p class="text-success"><i class="fa-solid fa-arrow-trend-up"></i> ROI net : <strong>1 032 812€</strong></p>
+            <p class="text-muted" style="font-size: 0.9rem">Basé sur un gain de productivité de 15%</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CAS CLIENTS -->
+    <section id="cas-clients" class="bg-white fade-in">
+      <div class="container">
+        <h2>Ils nous font confiance</h2>
+        <p class="section-desc">Découvrez comment nos clients transforment leur activité.</p>
+
+        <div class="grid" style="grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px">
+          <!-- Cas 1 -->
+          <div class="pricing-card">
+            <div style="
+                display: flex;
+                align-items: center;
+                gap: 15px;
+                margin-bottom: 20px;
+                padding: 15px;
+                background: #f0f9ff;
+                border-radius: 8px;
+                border-left: 4px solid var(--primary);
+              ">
+              <div style="
+                  width: 60px;
+                  height: 60px;
+                  border-radius: 50%;
+                  background: linear-gradient(135deg, #2563eb, #1d4ed8);
+                  display: flex;
+                  align-items: center;
+                  justify-content: center;
+                  font-size: 1.5rem;
+                  color: white;
+                  font-weight: 700;
+                  box-shadow: 0 4px 10px rgba(37, 99, 235, 0.3);
+                ">
+                JD
+              </div>
+              <div>
+                <div style="font-weight: 700; color: var(--secondary); display: flex; align-items: center; gap: 8px">
+                  Jean D.
+                  <span style="
+                      background: #10b981;
+                      color: white;
+                      padding: 2px 8px;
+                      border-radius: 4px;
+                      font-size: 0.7rem;
+                      font-weight: 600;
+                    ">✓ VÉRIFIÉ</span>
+                </div>
+                <div style="font-size: 0.85rem; color: var(--text-light)">Expert-comptable • 12 collaborateurs</div>
+                <div style="font-size: 0.8rem; color: var(--primary); margin-top: 3px">✓ Client pilote Q4 2025</div>
+              </div>
+            </div>
+            <h4>"Un gain de temps phénoménal"</h4>
+            <p class="text-muted">
+              "Nous avons automatisé 60% de la saisie comptable. NovaMind catégorise les factures et prépare les
+              écritures. C'est comme avoir 2 assistants seniors en plus."
+            </p>
+            <div style="margin-top: 20px; padding-top: 20px; border-top: 1px solid #e5e7eb">
+              <strong>Résultats :</strong>
+              <ul class="features-list" style="margin-top: 10px">
+                <li><i class="fa-solid fa-check"></i> 127k€ économisés / an</li>
+                <li><i class="fa-solid fa-check"></i> ROI x5.2</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Cas 2 -->
+          <div class="pricing-card">
+            <div style="
+                display: flex;
+                align-items: center;
+                gap: 15px;
+                margin-bottom: 20px;
+                padding: 15px;
+                background: #f0fdf4;
+                border-radius: 8px;
+                border-left: 4px solid var(--success);
+              ">
+              <div style="
+                  width: 60px;
+                  height: 60px;
+                  border-radius: 50%;
+                  background: linear-gradient(135deg, #10b981, #059669);
+                  display: flex;
+                  align-items: center;
+                  justify-content: center;
+                  font-size: 1.5rem;
+                  color: white;
+                  font-weight: 700;
+                  box-shadow: 0 4px 10px rgba(16, 185, 129, 0.3);
+                ">
+                ML
+              </div>
+              <div>
+                <div style="font-weight: 700; color: var(--secondary); display: flex; align-items: center; gap: 8px">
+                  Marie L.
+                  <span style="
+                      background: #10b981;
+                      color: white;
+                      padding: 2px 8px;
+                      border-radius: 4px;
+                      font-size: 0.7rem;
+                      font-weight: 600;
+                    ">✓ VÉRIFIÉ</span>
+                </div>
+                <div style="font-size: 0.85rem; color: var(--text-light)">
+                  Responsable Production • 45 collaborateurs
+                </div>
+                <div style="font-size: 0.8rem; color: var(--success); margin-top: 3px">✓ Client pilote Q4 2025</div>
+              </div>
+            </div>
+            <h4>"La traçabilité est parfaite"</h4>
+            <p class="text-muted">
+              "Dans l'industrie, on ne peut pas se permettre d'erreur. NovaMind trace chaque action. Nous avons réduit
+              les délais de validation de 3 jours à 4 heures."
+            </p>
+            <div style="margin-top: 20px; padding-top: 20px; border-top: 1px solid #e5e7eb">
+              <strong>Résultats :</strong>
+              <ul class="features-list" style="margin-top: 10px">
+                <li><i class="fa-solid fa-check"></i> 580k€ économisés / an</li>
+                <li><i class="fa-solid fa-check"></i> ROI x4.9</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TARIFS -->
+    <section id="tarifs" class="bg-light fade-in">
+      <div class="container">
+        <h2>Des tarifs simples et transparents</h2>
+        <p class="section-desc">Choisissez le plan adapté à votre croissance.</p>
 
         <div class="pricing-grid">
           <!-- Essentials -->
@@ -1057,7 +987,7 @@
               <li><i class="fa-solid fa-check"></i> Support email &lt; 24h</li>
               <li><i class="fa-solid fa-check"></i> SLA 99.5%</li>
             </ul>
-            <a href="https://www.genspark.ai/api/files/s/xHkmijWE#tarifs" class="btn btn-outline">🎁 Démarrer Maintenant</a>
+            <a href="https://www.genspark.ai/api/files/s/4XeMPcBb#tarifs" class="btn btn-outline">🎁 Démarrer Maintenant</a>
             <p class="text-center text-muted mt-2" style="font-size: 0.8rem">✓ 30 jours gratuits • Sans CB</p>
           </div>
 
@@ -1075,8 +1005,10 @@
               <li><i class="fa-solid fa-check"></i> Support prioritaire FR &lt; 2h</li>
               <li><i class="fa-solid fa-check"></i> API REST complète</li>
             </ul>
-            <a href="https://www.genspark.ai/api/files/s/xHkmijWE#tarifs" class="btn">🎁 Démarrer Maintenant</a>
-            <p class="text-center text-muted mt-2" style="font-size: 0.8rem">✓ 30 jours gratuits • Le choix de 80% de nos clients</p>
+            <a href="https://www.genspark.ai/api/files/s/4XeMPcBb#tarifs" class="btn">🎁 Démarrer Maintenant</a>
+            <p class="text-center text-muted mt-2" style="font-size: 0.8rem">
+              ✓ 30 jours gratuits • Le choix de 80% de nos clients
+            </p>
           </div>
 
           <!-- Enterprise -->
@@ -1087,103 +1019,22 @@
             <ul class="features-list">
               <li><i class="fa-solid fa-check"></i> <strong>Tout Executive +</strong></li>
               <li><i class="fa-solid fa-check"></i> Tâches illimitées</li>
-              <li><i class="fa-solid fa-check"></i> Intégrations custom</li>
-              <li><i class="fa-solid fa-check"></i> Support dédié 24/7</li>
+              <li><i class="fa-solid fa-check"></i> Support 24/7 dédié</li>
               <li><i class="fa-solid fa-check"></i> SSO / SAML</li>
+              <li><i class="fa-solid fa-check"></i> SLA 99.97%</li>
+              <li><i class="fa-solid fa-check"></i> Hébergement dédié</li>
             </ul>
-            <a href="https://www.genspark.ai/api/files/s/pages/contact.html" class="btn btn-outline">Nous Contacter</a>
-            <p class="text-center text-muted mt-2" style="font-size: 0.8rem">Réponse sous 24h</p>
+            <a href="mailto:contact@novalinkos.com" class="btn btn-outline">Contacter les Ventes</a>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- ROI CALCULATOR -->
-    <section class="bg-gray fade-in visible">
+    <!-- SECURITY -->
+    <section id="securite" class="bg-white fade-in">
       <div class="container">
-        <h2 class="text-center">Calculez Votre ROI</h2>
-        <div class="calculator-box">
-          <div class="calc-inputs">
-            <label>Nombre d'employés: <span id="emp-val" class="calc-value">100</span></label>
-            <input type="range" id="employees" min="10" max="1000" value="100" style="width: 100%">
-
-            <label style="margin-top: 20px">Heures admin/employé/semaine: <span id="hours-val" class="calc-value">5h</span></label>
-            <input type="range" id="hours" min="2" max="10" value="5" style="width: 100%">
-
-            <p class="text-muted" style="margin-top: 20px; font-size: 0.9rem">
-              <i class="fa-solid fa-info-circle"></i> Basé sur un coût horaire moyen de 40€ et un gain de productivité
-              estimé à 15%.
-            </p>
-          </div>
-          <div class="results-box">
-            <div class="result-row">
-              <span>Coût admin actuel:</span>
-              <strong id="current-cost">1 040 000&nbsp;€/an</strong>
-            </div>
-            <div class="result-row">
-              <span>Gain productivité (15%):</span>
-              <strong id="savings" style="color: var(--success)">156 000&nbsp;€/an</strong>
-            </div>
-            <div class="result-row">
-              <span>Coût NovaMind (Executive):</span>
-              <strong id="cost-novamind">7 188&nbsp;€/an</strong>
-            </div>
-            <div class="result-total">
-              <div class="result-row">
-                <span>ROI Net Annuel:</span>
-                <span id="net-roi">148 812&nbsp;€</span>
-              </div>
-            </div>
-            <div class="text-center mt-4">
-              <a href="https://www.genspark.ai/api/files/s/pages/demo.html" class="btn btn-sm">Obtenir une analyse personnalisée</a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ENERGY OPTIMIZATION -->
-    <section class="bg-white fade-in visible">
-      <div class="container">
-        <h2 class="text-center mb-8">⚡ Optimisation Énergétique</h2>
-        <p class="text-center text-muted mb-8" style="max-width: 800px; margin: 0 auto 2rem">
-          NovaMind pilote en continu vos actifs (PV, éolien, batteries) pour arbitrer entre autoconsommation, stockage
-          et revente spot.
-        </p>
-        <div class="diff-grid">
-          <div class="video-card">
-            <h4>📊 Cas d'Usage</h4>
-            <ul class="features-list">
-              <li><i class="fa-solid fa-bolt"></i> Charge/décharge batterie</li>
-              <li><i class="fa-solid fa-arrow-right-arrow-left"></i> Déplacement de charges</li>
-              <li><i class="fa-solid fa-solar-panel"></i> Maximisation autoconsommation</li>
-            </ul>
-          </div>
-          <div class="video-card">
-            <h4>🔌 Pré-requis</h4>
-            <ul class="features-list">
-              <li><i class="fa-solid fa-plug"></i> Accès prix dynamiques</li>
-              <li><i class="fa-solid fa-chart-line"></i> Télémétrie production</li>
-              <li><i class="fa-solid fa-battery-full"></i> Batterie via API/PLC</li>
-            </ul>
-          </div>
-          <div class="video-card">
-            <h4>💰 Signal Économique</h4>
-            <p class="text-muted">
-              Rentable dès quelques MWh/mois. À 299 €/mois, il suffit d'optimiser ≥ K = 299 / Δ kWh/mois.
-            </p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Correction 5: SECURITY REALISTE -->
-    <section id="securite" class="bg-gray fade-in visible">
-      <div class="container">
-        <h2 class="text-center mb-8">Sécurité &amp; Conformité Enterprise</h2>
-        <p class="text-center text-muted mb-8">
-          Architecture conçue pour protéger vos données et respecter les réglementations.
-        </p>
+        <h2>Sécurité &amp; Conformité</h2>
+        <p class="section-desc">Vos données sont notre priorité absolue.</p>
 
         <div class="security-grid">
           <div class="security-badge">
@@ -1227,354 +1078,98 @@
             <span style="background: #fef3c7; color: #92400e">📅 Préparation 2026</span>
           </div>
         </div>
-        <div class="text-center mt-6" style="background: #eff6ff; padding: 20px; border-radius: 8px; border-left: 4px solid var(--primary)">
+
+        <div class="text-center mt-6" style="
+            background: #eff6ff;
+            padding: 20px;
+            border-radius: 8px;
+            border-left: 4px solid var(--primary);
+            margin-top: 40px;
+          ">
           <p style="margin: 0; font-size: 0.95rem; color: var(--text-main)">
-            <i class="fa-solid fa-info-circle text-primary"></i> <strong>Roadmap Conformité :</strong> ISO 27001 et SOC 2 prévus pour 2026. Architecture déjà conçue pour répondre aux exigences.
+            <i class="fa-solid fa-info-circle text-primary"></i> <strong>Roadmap Conformité :</strong> ISO 27001 et SOC
+            2 prévus pour 2026. Architecture déjà conçue pour répondre aux exigences.
           </p>
         </div>
-        <div class="text-center mt-8">
-          <a href="https://www.genspark.ai/api/files/s/pages/securite.html" class="btn btn-outline">Voir tous les détails de sécurité</a>
-        </div>
-      </div>
-    </section>
-
-    <!-- Correction 6: PREUVES MESURABLES (MINI CASE STUDIES) -->
-    <section id="cas-clients" class="bg-white fade-in visible">
-      <div class="container">
-        <h2 class="text-center mb-8">Études de Cas Réelles</h2>
-
-        <div class="case-study-grid">
-          <!-- Cas 1 -->
-          <div class="case-card">
-            <div class="case-header">
-              <h3><i class="fa-solid fa-calculator"></i> Cabinet Comptable</h3>
-              <span style="opacity: 0.8; font-size: 0.9rem">12 collaborateurs • Finance</span>
-            </div>
-            <div class="case-body">
-              <div style="display: flex; align-items: center; gap: 15px; margin-bottom: 20px; padding: 15px; background: #f0f9ff; border-radius: 8px; border-left: 4px solid var(--primary)">
-                <div style="width: 60px; height: 60px; border-radius: 50%; background: linear-gradient(135deg, #2563eb, #1d4ed8); display: flex; align-items: center; justify-content: center; font-size: 1.5rem; color: white; font-weight: 700; box-shadow: 0 4px 10px rgba(37,99,235,0.3)">JD</div>
-                <div>
-                  <div style="font-weight: 700; color: var(--secondary); display: flex; align-items: center; gap: 8px">
-                    Jean D. <span style="background: #10b981; color: white; padding: 2px 8px; border-radius: 4px; font-size: 0.7rem; font-weight: 600">✓ VÉRIFIÉ</span>
-                  </div>
-                  <div style="font-size: 0.85rem; color: var(--text-light)">Expert-comptable • 12 collaborateurs</div>
-                  <div style="font-size: 0.8rem; color: var(--primary); margin-top: 3px">✓ Client pilote Q4 2025</div>
-                </div>
-              </div>
-              <p><strong>Problème :</strong> 15h/semaine perdues en relances clients manuelles et erreurs de saisie.</p>
-              <p><strong>Solution :</strong> Automatisation des relances et rapprochement bancaire NovaMind.</p>
-              <p style="margin-top: 15px; font-style: italic; font-size: 1.05rem; line-height: 1.6">"On a récupéré 15h/semaine. Le retour sur investissement a été immédiat. NovaMind s'est payé en moins d'un mois."</p>
-              <div class="metric-grid">
-                <div class="metric-item">
-                  <strong>-60%</strong>
-                  <span>Temps de gestion</span>
-                </div>
-                <div class="metric-item">
-                  <strong>~1 200€</strong>
-                  <span>Gain mensuel</span>
-                </div>
-                <div class="metric-item">
-                  <strong>10 jours</strong>
-                  <span>Déploiement</span>
-                </div>
-                <div class="metric-item">
-                  <strong>-40%</strong>
-                  <span>Erreurs saisie</span>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Cas 2 -->
-          <div class="case-card">
-            <div class="case-header">
-              <h3><i class="fa-solid fa-industry"></i> PME Industrielle</h3>
-              <span style="opacity: 0.8; font-size: 0.9rem">45 collaborateurs • Production</span>
-            </div>
-            <div class="case-body">
-              <div style="display: flex; align-items: center; gap: 15px; margin-bottom: 20px; padding: 15px; background: #f0fdf4; border-radius: 8px; border-left: 4px solid var(--success)">
-                <div style="width: 60px; height: 60px; border-radius: 50%; background: linear-gradient(135deg, #10b981, #059669); display: flex; align-items: center; justify-content: center; font-size: 1.5rem; color: white; font-weight: 700; box-shadow: 0 4px 10px rgba(16,185,129,0.3)">ML</div>
-                <div>
-                  <div style="font-weight: 700; color: var(--secondary); display: flex; align-items: center; gap: 8px">
-                    Marie L. <span style="background: #10b981; color: white; padding: 2px 8px; border-radius: 4px; font-size: 0.7rem; font-weight: 600">✓ VÉRIFIÉ</span>
-                  </div>
-                  <div style="font-size: 0.85rem; color: var(--text-light)">Responsable production • 45 collaborateurs</div>
-                  <div style="font-size: 0.8rem; color: var(--success); margin-top: 3px">✓ Client pilote Q4 2025</div>
-                </div>
-              </div>
-              <p><strong>Problème :</strong> Gestion de stocks manuelle entraînant des ruptures critiques.</p>
-              <p><strong>Solution :</strong> Monitoring stocks temps réel et alertes prédictives NovaMind.</p>
-              <p style="margin-top: 15px; font-style: italic; font-size: 1.05rem; line-height: 1.6">"Les alertes prédictives ont réduit nos ruptures de 75%. C'est un game-changer. Je recommande sans hésiter."</p>
-              <div class="metric-grid">
-                <div class="metric-item">
-                  <strong>-75%</strong>
-                  <span>Ruptures stock</span>
-                </div>
-                <div class="metric-item">
-                  <strong>~3 500€</strong>
-                  <span>Gain mensuel</span>
-                </div>
-                <div class="metric-item">
-                  <strong>15 jours</strong>
-                  <span>Déploiement</span>
-                </div>
-                <div class="metric-item">
-                  <strong>+30%</strong>
-                  <span>Rotation stock</span>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="text-center mt-8">
-          <a href="https://www.genspark.ai/api/files/s/pages/demo.html" class="btn">Obtenir Votre Analyse ROI Personnalisée</a>
-          <p class="text-muted mt-2" style="font-size: 0.85rem">
-            *Résultats réels de clients pilotes Q4 2025. Témoignages anonymisés pour confidentialité.
-          </p>
-        </div>
-      </div>
-    </section>
-
-    <!-- COMPARATIF -->
-    <section id="comparatif" class="bg-white fade-in visible">
-      <div class="container">
-        <h2 class="text-center mb-8">Pourquoi Choisir NovaMind ?</h2>
-        <div style="overflow-x: auto">
-          <table style="width: 100%; border-collapse: collapse; margin-top: 30px">
-            <thead>
-              <tr style="background: var(--bg-light)">
-                <th style="padding: 15px; text-align: left; border-bottom: 1px solid var(--border-color)">Critère</th>
-                <th style="padding: 15px; text-align: center; border-bottom: 1px solid var(--border-color); background: #eff6ff; color: var(--primary)">
-                  <strong>NovaMind</strong>
-                </th>
-                <th style="padding: 15px; text-align: center; border-bottom: 1px solid var(--border-color)">Zapier</th>
-                <th style="padding: 15px; text-align: center; border-bottom: 1px solid var(--border-color)">Make</th>
-                <th style="padding: 15px; text-align: center; border-bottom: 1px solid var(--border-color)">n8n</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td style="padding: 15px; border-bottom: 1px solid var(--border-color)"><strong>Prix (Plan Start)</strong></td>
-                <td style="padding: 15px; text-align: center; border-bottom: 1px solid var(--border-color); background: #eff6ff">
-                  <strong style="color: var(--primary)">299€/mois</strong>
-                </td>
-                <td style="padding: 15px; text-align: center; border-bottom: 1px solid var(--border-color)">588€/mois</td>
-                <td style="padding: 15px; text-align: center; border-bottom: 1px solid var(--border-color)">432€/mois</td>
-                <td style="padding: 15px; text-align: center; border-bottom: 1px solid var(--border-color)">Gratuit (Self)</td>
-              </tr>
-              <tr>
-                <td style="padding: 15px; border-bottom: 1px solid var(--border-color)"><strong>Support Français</strong></td>
-                <td style="padding: 15px; text-align: center; border-bottom: 1px solid var(--border-color); background: #eff6ff">
-                  <i class="fa-solid fa-check text-success"></i> Oui
-                </td>
-                <td style="padding: 15px; text-align: center; border-bottom: 1px solid var(--border-color)">
-                  <i class="fa-solid fa-xmark text-muted"></i> Non
-                </td>
-                <td style="padding: 15px; text-align: center; border-bottom: 1px solid var(--border-color)">
-                  <i class="fa-solid fa-xmark text-muted"></i> Non
-                </td>
-                <td style="padding: 15px; text-align: center; border-bottom: 1px solid var(--border-color)">
-                  <i class="fa-solid fa-xmark text-muted"></i> Non
-                </td>
-              </tr>
-              <tr>
-                <td style="padding: 15px; border-bottom: 1px solid var(--border-color)"><strong>Hébergement Europe</strong></td>
-                <td style="padding: 15px; text-align: center; border-bottom: 1px solid var(--border-color); background: #eff6ff">
-                  <i class="fa-solid fa-check text-success"></i> Oui
-                </td>
-                <td style="padding: 15px; text-align: center; border-bottom: 1px solid var(--border-color)">
-                  <i class="fa-solid fa-xmark text-muted"></i> Non
-                </td>
-                <td style="padding: 15px; text-align: center; border-bottom: 1px solid var(--border-color)">
-                  <i class="fa-solid fa-xmark text-muted"></i> Non
-                </td>
-                <td style="padding: 15px; text-align: center; border-bottom: 1px solid var(--border-color)">Variable</td>
-              </tr>
-              <tr>
-                <td style="padding: 15px; border-bottom: 1px solid var(--border-color)"><strong>Workflows</strong></td>
-                <td style="padding: 15px; text-align: center; border-bottom: 1px solid var(--border-color); background: #eff6ff">
-                  <strong style="color: var(--primary)">Illimités*</strong>
-                </td>
-                <td style="padding: 15px; text-align: center; border-bottom: 1px solid var(--border-color)">Limités</td>
-                <td style="padding: 15px; text-align: center; border-bottom: 1px solid var(--border-color)">Limités</td>
-                <td style="padding: 15px; text-align: center; border-bottom: 1px solid var(--border-color)">Illimités</td>
-              </tr>
-              <tr>
-                <td style="padding: 15px; border-bottom: 1px solid var(--border-color)"><strong>Migration Gratuite</strong></td>
-                <td style="padding: 15px; text-align: center; border-bottom: 1px solid var(--border-color); background: #eff6ff">
-                  <i class="fa-solid fa-check text-success"></i> Incluse
-                </td>
-                <td style="padding: 15px; text-align: center; border-bottom: 1px solid var(--border-color)">
-                  <i class="fa-solid fa-xmark text-muted"></i> Non
-                </td>
-                <td style="padding: 15px; text-align: center; border-bottom: 1px solid var(--border-color)">
-                  <i class="fa-solid fa-xmark text-muted"></i> Non
-                </td>
-                <td style="padding: 15px; text-align: center; border-bottom: 1px solid var(--border-color)">
-                  <i class="fa-solid fa-xmark text-muted"></i> Non
-                </td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-      </div>
-    </section>
-
-    <!-- ÉQUIPE & VISION -->
-    <section id="equipe" class="bg-gray fade-in visible">
-      <div class="container">
-        <h2 class="text-center mb-8">Équipe &amp; Vision</h2>
-        <div class="grid" style="display: grid; grid-template-columns: 1fr 1fr; gap: 40px">
-          <div class="video-card">
-            <h3>Pourquoi NovaMind</h3>
-            <p class="text-muted">
-              NovaMind est né d'une conviction simple : les équipes doivent se concentrer sur la valeur, pas sur la
-              répétition. Notre "OS d'agent d'entreprise" automatise, mesure et fiabilise les processus clé.
-            </p>
-          </div>
-          <div class="video-card">
-            <h3>Qui sommes-nous</h3>
-            <p class="text-muted">
-              Une alliance entre l'expérience terrain et l'innovation IA. Notre approche est pragmatique (ROI
-              mesurable), sécurisée (RGPD, EU), et humaine (accompagnement).
-            </p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- INTÉGRATIONS -->
-    <section id="integrations" class="bg-gray fade-in visible">
-      <div class="container text-center">
-        <h2>54 Intégrations Natives</h2>
-        <p class="text-muted mb-8">+ API REST pour vos besoins spécifiques</p>
-        <div style="display: flex; justify-content: center; gap: 15px; flex-wrap: wrap; margin-bottom: 30px">
-          <span class="hero-badge">Gmail</span>
-          <span class="hero-badge">Outlook</span>
-          <span class="hero-badge">Salesforce</span>
-          <span class="hero-badge">HubSpot</span>
-          <span class="hero-badge">Stripe</span>
-          <span class="hero-badge">Excel</span>
-          <span class="hero-badge">Shopify</span>
-          <span class="hero-badge">Slack</span>
-          <span class="hero-badge">Teams</span>
-        </div>
-        <a href="https://www.genspark.ai/api/files/s/pages/integrations.html" class="btn btn-outline">Voir toutes les intégrations</a>
       </div>
     </section>
 
     <!-- FAQ -->
-    <section id="faq" class="bg-white fade-in visible">
+    <section id="faq" class="bg-light fade-in">
       <div class="container" style="max-width: 800px">
         <h2 class="text-center mb-8">Questions Fréquentes</h2>
 
         <details>
-          <summary>Comment fonctionne l'essai gratuit 30 jours ?</summary>
+          <summary>Comment fonctionne l'essai gratuit de 30 jours ?</summary>
           <p class="text-muted">
-            Vous avez un accès complet au plan Essentials ou Executive pendant 30 jours. Aucune carte bancaire requise. À la fin de l'essai, vous décidez de continuer ou non. Sans engagement.
+            Vous avez un accès complet au plan Essentials ou Executive pendant <strong>30 jours</strong> avec
+            accompagnement personnalisé dédié (onboarding + 2 calls). <strong>Aucune carte bancaire requise.</strong> À
+            la fin de l'essai, vous décidez de continuer ou non. Sans engagement, sans frais cachés.
           </p>
         </details>
 
         <details>
-          <summary>Puis-je changer de plan à tout moment ?</summary>
+          <summary>Mes données sont-elles sécurisées ?</summary>
           <p class="text-muted">
-            Oui, vous pouvez upgrader ou downgrader votre plan à tout moment. Les changements sont immédiats.
+            Oui. Nous utilisons un chiffrement AES-256 de niveau bancaire. Toutes les données sont hébergées en Europe
+            (France/Allemagne) et nous sommes 100% conformes RGPD.
           </p>
         </details>
 
         <details>
-          <summary>Puis-je migrer depuis Zapier/Make ?</summary>
+          <summary>Quelle est la différence avec ChatGPT ?</summary>
           <p class="text-muted">
-            Oui ! Pour les plans Executive, nous offrons la migration gratuite de vos scénarios existants.
+            ChatGPT génère du texte. NovaMind <strong>exécute des actions</strong>. Nous nous connectons à vos outils
+            (API) pour automatiser des processus réels, avec une mémoire contextuelle de votre entreprise et une
+            traçabilité totale.
           </p>
         </details>
-
-        <details>
-          <summary>Où sont hébergées mes données ?</summary>
-          <p class="text-muted">
-            Toutes les données sont hébergées en Europe (Paris/Francfort) et chiffrées. Nous sommes conformes RGPD.
-          </p>
-        </details>
-      </div>
-    </section>
-
-    <!-- TRUST SIGNALS AVANT FOOTER -->
-    <section class="bg-white fade-in visible">
-      <div class="container">
-        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 30px; padding: 40px 0">
-          <div class="text-center">
-            <i class="fa-solid fa-headset fa-2x text-primary mb-3"></i>
-            <h4 style="font-size: 1rem; margin-bottom: 8px">Support Français Réactif</h4>
-            <p class="text-muted" style="font-size: 0.85rem">Réponse sous 2h en français<br>Lun-Ven 9h-18h</p>
-          </div>
-          <div class="text-center">
-            <i class="fa-solid fa-shield-check fa-2x text-success mb-3"></i>
-            <h4 style="font-size: 1rem; margin-bottom: 8px">Garantie 30 Jours</h4>
-            <p class="text-muted" style="font-size: 0.85rem">Satisfait ou 100% remboursé<br>Sans condition</p>
-          </div>
-          <div class="text-center">
-            <i class="fa-solid fa-rocket fa-2x text-primary mb-3"></i>
-            <h4 style="font-size: 1rem; margin-bottom: 8px">Déploiement Rapide</h4>
-            <p class="text-muted" style="font-size: 0.85rem">Premiers résultats en 10-15 jours<br>Formation incluse</p>
-          </div>
-          <div class="text-center">
-            <i class="fa-solid fa-lock fa-2x text-success mb-3"></i>
-            <h4 style="font-size: 1rem; margin-bottom: 8px">Sécurité Garantie</h4>
-            <p class="text-muted" style="font-size: 0.85rem">RGPD + Hébergement France<br>Données cryptées AES-256</p>
-          </div>
-        </div>
       </div>
     </section>
 
     <!-- FOOTER -->
-    <!-- Correction 7: Footer Legal Complet -->
     <footer>
       <div class="container">
         <div class="footer-grid">
           <div class="footer-col">
             <h4>Produit</h4>
             <ul class="footer-links">
-              <li><a href="https://www.genspark.ai/api/files/s/xHkmijWE#tarifs">Tarifs</a></li>
-              <li><a href="https://www.genspark.ai/api/files/s/pages/comparaison.html">Comparaison</a></li>
+              <li><a href="https://www.genspark.ai/api/files/s/4XeMPcBb#features">Fonctionnalités</a></li>
+              <li><a href="https://www.genspark.ai/api/files/s/4XeMPcBb#tarifs">Tarifs</a></li>
               <li><a href="https://www.genspark.ai/api/files/s/pages/integrations.html">Intégrations</a></li>
-              <li><a href="https://www.genspark.ai/api/files/s/pages/demo-dashboard.html">Démo Dashboard</a></li>
+              <li><a href="https://www.genspark.ai/api/files/s/4XeMPcBb#securite">Sécurité</a></li>
             </ul>
           </div>
           <div class="footer-col">
             <h4>Ressources</h4>
             <ul class="footer-links">
-              <li><a href="https://www.genspark.ai/api/files/s/xHkmijWE#">Documentation</a></li>
-              <li><a href="https://www.genspark.ai/api/files/s/xHkmijWE#">API Reference</a></li>
-              <li><a href="https://www.novalinkos.com/fr/blog">Blog</a></li>
-              <li><a href="https://www.genspark.ai/api/files/s/xHkmijWE#faq">FAQ</a></li>
-              <li><a href="https://www.genspark.ai/api/files/s/xHkmijWE#">Support</a></li>
+              <li><a href="https://www.genspark.ai/api/files/s/4XeMPcBb#">Blog</a></li>
+              <li><a href="https://www.genspark.ai/api/files/s/4XeMPcBb#cas-clients">Cas Clients</a></li>
+              <li><a href="https://www.genspark.ai/api/files/s/4XeMPcBb#">Documentation</a></li>
+              <li><a href="https://www.genspark.ai/api/files/s/4XeMPcBb#">API</a></li>
             </ul>
           </div>
           <div class="footer-col">
             <h4>Entreprise</h4>
             <ul class="footer-links">
-              <li><a href="https://www.genspark.ai/api/files/s/xHkmijWE#">À propos</a></li>
+              <li><a href="https://www.genspark.ai/api/files/s/4XeMPcBb#equipe">À Propos</a></li>
               <li><a href="https://www.genspark.ai/api/files/s/pages/contact.html">Contact</a></li>
+              <li><a href="https://www.genspark.ai/api/files/s/4XeMPcBb#">Carrières</a></li>
+              <li><a href="https://www.genspark.ai/api/files/s/4XeMPcBb#">Presse</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h4>Légal</h4>
+            <ul class="footer-links">
               <li><a href="https://www.genspark.ai/api/files/s/pages/mentions-legales.html">Mentions Légales</a></li>
-              <!-- Legal -->
-              <li><a href="https://www.genspark.ai/api/files/s/pages/confidentialite.html">Confidentialité (RGPD)</a></li>
-              <!-- Legal -->
-              <li><a href="https://www.genspark.ai/api/files/s/pages/cgu.html">CGU</a></li>
-              <!-- Legal -->
+              <li><a href="https://www.genspark.ai/api/files/s/pages/confidentialite.html">Politique de Confidentialité</a></li>
+              <li><a href="https://www.genspark.ai/api/files/s/pages/cgu.html">CGU / CGV</a></li>
               <li><a href="https://www.genspark.ai/api/files/s/pages/securite.html">Sécurité</a></li>
-              <!-- Legal -->
             </ul>
           </div>
         </div>
         <div class="footer-bottom">
-          <p>© 2026 NovaMind. Tous droits réservés.</p>
-          <div class="legal-links">
-            <span>Hébergement France 🇫🇷</span>
-            <span>SIRET: En cours</span>
-            <a href="https://www.genspark.ai/api/files/s/pages/mentions-legales.html">Mentions</a>
-            <a href="https://www.genspark.ai/api/files/s/pages/confidentialite.html">RGPD</a>
-            <a href="https://www.genspark.ai/api/files/s/pages/cgu.html">CGU</a>
-          </div>
+          <p>© 2026 NovaMind. Tous droits réservés. Hébergé en France 🇫🇷</p>
         </div>
       </div>
     </footer>
@@ -1602,54 +1197,6 @@
 
     <!-- JavaScript logic -->
     <script>
-      // ROI Calculator Logic
-      const employeesSlider = document.getElementById('employees');
-      const hoursSlider = document.getElementById('hours');
-      const empVal = document.getElementById('emp-val');
-      const hoursVal = document.getElementById('hours-val');
-
-      const currentCostEl = document.getElementById('current-cost');
-      const savingsEl = document.getElementById('savings');
-      const costNovamindEl = document.getElementById('cost-novamind');
-      const netRoiEl = document.getElementById('net-roi');
-
-      function calculateROI() {
-        const emps = parseInt(employeesSlider.value);
-        const hours = parseInt(hoursSlider.value);
-
-        empVal.textContent = emps;
-        hoursVal.textContent = hours + 'h';
-
-        // Formula: emps * hours * 52 weeks * 40 eur/h
-        const currentCost = emps * hours * 52 * 40;
-        const savings = currentCost * 0.15; // 15% productivity gain
-        const novamindCost = 599 * 12; // Executive plan yearly
-
-        const netRoi = savings - novamindCost;
-
-        currentCostEl.textContent =
-          new Intl.NumberFormat('fr-FR', { style: 'currency', currency: 'EUR', maximumFractionDigits: 0 }).format(
-            currentCost,
-          ) + '/an';
-        savingsEl.textContent =
-          new Intl.NumberFormat('fr-FR', { style: 'currency', currency: 'EUR', maximumFractionDigits: 0 }).format(
-            savings,
-          ) + '/an';
-        costNovamindEl.textContent =
-          new Intl.NumberFormat('fr-FR', { style: 'currency', currency: 'EUR', maximumFractionDigits: 0 }).format(
-            novamindCost,
-          ) + '/an';
-        netRoiEl.textContent = new Intl.NumberFormat('fr-FR', {
-          style: 'currency',
-          currency: 'EUR',
-          maximumFractionDigits: 0,
-        }).format(netRoi);
-      }
-
-      employeesSlider.addEventListener('input', calculateROI);
-      hoursSlider.addEventListener('input', calculateROI);
-      calculateROI(); // Init
-
       // Language Selector Stub
       document.getElementById('lang-select').addEventListener('change', function (e) {
         alert('Changement de langue vers : ' + e.target.value + ' (Fonctionnalité complète à venir)');
@@ -1671,10 +1218,10 @@
       // Scroll Reveal Animation
       const observerOptions = {
         threshold: 0.1,
-        rootMargin: '0px 0px -50px 0px'
+        rootMargin: '0px 0px -50px 0px',
       };
       const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
+        entries.forEach((entry) => {
           if (entry.isIntersecting) {
             entry.target.classList.add('visible');
           }
@@ -1682,12 +1229,38 @@
       }, observerOptions);
 
       // Add fade-in class to sections
-      document.querySelectorAll('section').forEach(section => {
+      document.querySelectorAll('section').forEach((section) => {
         section.classList.add('fade-in');
         observer.observe(section);
       });
+
+      // ROI Calculator Logic
+      const employeesInput = document.getElementById('employees');
+      const hoursInput = document.getElementById('hours');
+      const rateInput = document.getElementById('rate');
+      const savingsEl = document.getElementById('savings');
+
+      function calculateROI() {
+        const employees = parseInt(employeesInput.value) || 0;
+        const hours = parseInt(hoursInput.value) || 0;
+        const rate = parseInt(rateInput.value) || 0;
+
+        // Formula: Employees * Hours/week * 52 weeks * Rate * 15% productivity gain
+        const totalCost = employees * hours * 52 * rate;
+        const savings = totalCost * 0.15; // Conservative 15% estimate
+
+        savingsEl.textContent = new Intl.NumberFormat('fr-FR', {
+          style: 'currency',
+          currency: 'EUR',
+          maximumFractionDigits: 0,
+        }).format(savings);
+      }
+
+      [employeesInput, hoursInput, rateInput].forEach((input) => {
+        input.addEventListener('input', calculateROI);
+      });
     </script>
-  <script defer="" src="./NovaMind - Automatisez Votre Entreprise_files/vcd15cbe7772f49c399c6a5babf22c1241717689176015" integrity="sha512-ZpsOmlRQV6y907TI0dKBHq9Md29nnaEIPlkf84rnaERnq6zvWvPUqr2ft8M1aS28oN72PdrCzSjY4U6VaAw1EQ==" data-cf-beacon="{&quot;rayId&quot;:&quot;9bc740d1eaf2016d&quot;,&quot;serverTiming&quot;:{&quot;name&quot;:{&quot;cfExtPri&quot;:true,&quot;cfEdge&quot;:true,&quot;cfOrigin&quot;:true,&quot;cfL4&quot;:true,&quot;cfSpeedBrain&quot;:true,&quot;cfCacheStatus&quot;:true}},&quot;version&quot;:&quot;2025.9.1&quot;,&quot;token&quot;:&quot;4edd5f8ec12a48cfa682ab8261b80a79&quot;}" crossorigin="anonymous"></script>
+  <script defer="" src="./NovaMind - Automatisez Votre Entreprise (9.8_10)_files/vcd15cbe7772f49c399c6a5babf22c1241717689176015" integrity="sha512-ZpsOmlRQV6y907TI0dKBHq9Md29nnaEIPlkf84rnaERnq6zvWvPUqr2ft8M1aS28oN72PdrCzSjY4U6VaAw1EQ==" data-cf-beacon="{&quot;rayId&quot;:&quot;9bc79f8bcf532b02&quot;,&quot;serverTiming&quot;:{&quot;name&quot;:{&quot;cfExtPri&quot;:true,&quot;cfEdge&quot;:true,&quot;cfOrigin&quot;:true,&quot;cfL4&quot;:true,&quot;cfSpeedBrain&quot;:true,&quot;cfCacheStatus&quot;:true}},&quot;version&quot;:&quot;2025.9.1&quot;,&quot;token&quot;:&quot;4edd5f8ec12a48cfa682ab8261b80a79&quot;}" crossorigin="anonymous"></script>
 
 
 </body></html>
